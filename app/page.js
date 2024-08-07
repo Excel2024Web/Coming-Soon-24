@@ -6,7 +6,7 @@ import excel2021 from "../assets/excel2021.svg";
 import excel2022 from "../assets/excel2022.svg";
 import excel2023 from "../assets/excellogo-2023.png";
 
-export default function Home() {
+export default function Home() { 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center">
       <div className="absolute flex w-screen h-screen bg-[url('/bg-mobile.jpg')] bg-center sm:bg-[url('/bg.svg')] bg-cover bg-no-repeat"></div>
