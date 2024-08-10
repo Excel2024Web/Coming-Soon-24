@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from "react";
+=======
+>>>>>>> df784e2768e09e4d8e7e9748af31a1650f461574
 import Image from "next/image";
 import excel2018 from "../assets/excel2018.png";
 import excel2019 from "../assets/excel2019.png";
@@ -7,6 +10,7 @@ import excel2020 from "../assets/excel2020.png";
 import excel2021 from "../assets/excel2021.svg";
 import excel2022 from "../assets/excel2022.svg";
 import excel2023 from "../assets/excellogo-2023.png";
+<<<<<<< HEAD
 import { faFacebookF, faTwitter, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import VideoDialog from './video';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -40,10 +44,20 @@ export default function Home() {
       <div className="absolute flex w-screen h-screen bg-[url('/bg-mobile.jpg')] bg-center sm:bg-[url('/bg.svg')] bg-cover bg-no-repeat"></div>
       <div className="pl-10 z-10 flex flex-col -mt-36 sm:-mt-52 items-center justify-center relative">
         <div id="evolution_in_progress" >
+=======
+
+export default function Home() { 
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-center">
+      <div className="absolute flex w-screen h-screen bg-[url('/bg-mobile.jpg')] bg-center sm:bg-[url('/bg.svg')] bg-cover bg-no-repeat"></div>
+      <div className="pl-10 z-10 flex flex-col -mt-36 sm:-mt-52 items-center justify-center">
+        <div id="evolution_in_progress">
+>>>>>>> df784e2768e09e4d8e7e9748af31a1650f461574
           <p className="text-center text-white tracking-[0.1rem] sm:tracking-[0.5rem] scale-95 p-2 mb-2 text-base sm:text-lg">
             EVOLUTION IN PROGRESS
           </p>
         </div>
+<<<<<<< HEAD
         <div id="excel_2024" className="">
           <p className="text-white oxygen-mono-regular text-3xl sm:text-4xl border-0.125rem border-[#66cfff] shadow-[0_0_0.5rem_#66cfff] rounded-full p-3 tracking-custom-wide">
             EXCEL 2024
@@ -63,12 +77,22 @@ export default function Home() {
         </div>
       </div>
 
+=======
+        <div id="excel_2024">
+          <p className="text-white oxygen-mono-regular text-3xl sm:text-4xl">
+            EXCEL 2024
+          </p>
+        </div>
+        <div id="play_button"></div>
+      </div>
+>>>>>>> df784e2768e09e4d8e7e9748af31a1650f461574
       <div
         id="logos"
         className="z-10 px-4 absolute bottom-4 flex flex-col sm:flex-row gap-y-2 items-center justify-between w-full "
       >
         <div id="social_logos" className="flex gap-1.5 justify-center">
           <a
+<<<<<<< HEAD
             href="https://www.facebook.com/excelmec"
             target="_blank"
             className="w-[48px] h-[48px] rounded-full flex items-center justify-center bg-gray-600 hover:bg-gray-400 transition-colors"
@@ -98,6 +122,46 @@ export default function Home() {
             className="w-[48px] h-[48px] rounded-full flex items-center justify-center bg-gray-600 hover:bg-gray-400 transition-colors"
           >
             <FontAwesomeIcon className="h-5 w-5 text-white shadow-[8px_8px_8px_rgba(0,0,0,0.5)] hover:shadow-[6px_6px_12px_rgba(0,0,0,0.5)] transition-shadow" icon={faLinkedin} />
+=======
+            href="https://facebook.com"
+            target="_blank"
+            className="w-[48px] h-[48px] rounded-full flex items-center justify-center bg-gray-600 hover:bg-gray-400 transition-colors"
+          >
+            <i
+              className="fa-brands fa-facebook-f text-xl"
+              style={{color: "white", textShadow: "6px 6px 5px rgb(0, 0, 0)"}}
+            ></i>
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            className="w-[48px] h-[48px] rounded-full flex items-center justify-center bg-gray-600 hover:bg-gray-400 transition-colors"
+          >
+            <i
+              className="fa-brands fa-x-twitter text-xl shadow-lg"
+              style={{color: "white", textShadow: "6px 6px 5px rgb(0, 0, 0)"}}
+            ></i>
+          </a>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            className="w-[48px] h-[48px] rounded-full flex items-center justify-center bg-gray-600 hover:bg-gray-400 transition-colors"
+          >
+            <i
+              className="fa-brands fa-instagram text-xl"
+              style={{color: "white", textShadow: "6px 6px 4px rgb(0, 0, 0)"}}
+            ></i>
+          </a>
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            className="w-[48px] h-[48px] rounded-full flex items-center justify-center bg-gray-600 hover:bg-gray-400 transition-colors"
+          >
+            <i
+              className="fa-brands fa-linkedin-in text-xl"
+              style={{color: "white", textShadow: "6px 6px 5px rgb(0, 0, 0)"}}
+            ></i>
+>>>>>>> df784e2768e09e4d8e7e9748af31a1650f461574
           </a>
         </div>
         <div id="legend_logos" className="flex">
