@@ -7,7 +7,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-<<<<<<< HEAD
       letterSpacing: {
         'custom-wide': '0.75rem',
         'custom-wider': '0.75em',
@@ -34,14 +33,4 @@ module.exports = {
       }, ['responsive', 'hover']);
     },
   ],
-=======
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
-    },
-  },
-  plugins: [],
->>>>>>> df784e2768e09e4d8e7e9748af31a1650f461574
 };
