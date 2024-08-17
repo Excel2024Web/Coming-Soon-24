@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+  @keyframes twinkling {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../public/starr.jpg');
+    
+    animation: twinkling 6s forwards ease-out;
+  }
+  
+
+  @keyframes flicker {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes expand {
+    0% {
+      transform: scale(0.5); /* Start smaller */
+    }
+    100% {
+      transform: scale(1); /* End at normal size */
+    }
+  }
+  
+  .flicker {
+    animation: flicker 0.1s 10 alternate,expand 2s 1 forwards ease-in-out;
+  }
+  .bigger{
+    animation: expand 2s 1 forwards ease-in-out
+  }
+  @keyframes popUp {
+    0% {
+      transform: scale(0); /* Start from invisible and small */
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1); /* End at normal size */
+      opacity: 1;
+    }
+  }
+  
+  .pop-up {
+    animation: popUp 0.5s ease-out 2s forwards; /* 0.5s duration, 1s delay, and forwards to keep the final state */
+    opacity: 0; /* Ensure button is initially invisible */
+    transform: scale(0); /* Ensure button is initially small */
+  }
+  
