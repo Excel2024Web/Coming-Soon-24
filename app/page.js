@@ -3,13 +3,11 @@ import React, { useState, useEffect } from 'react';
 
 import Image from "next/image";
 
-import { faFacebookF, faTwitter, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons'; // Corrected the imports
 import VideoDialog from './video';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Loader from './loader';  // Import the Loader component
 
-
-export default function Home() { 
+export default function Home() {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(true);
 
@@ -30,30 +28,48 @@ export default function Home() {
     setOpen(false);
   };
 
+  // Function to wrap text in spans with flicker animation
+  const applyFlickerEffect = (text, delays) => {
+    return text.split('').map((char, index) => (
+      <span
+        key={index}
+        className="flicker-animation"
+        style={{ animationDelay: `${delays[index] || 0}s`, animationIterationCount: '1' }}
+      >
+        {char}
+      </span>
+    ));
+  };
+
+  const flickerDelays = [0, 0.3, 0.2, 0.6, 0.3, 0.5, 0.1, 0.2, 0.5, 0.3, 0.7, 0.4, 0.2, 0.8, 0.6, 0.7, 0.2, 0.0, 0.9];
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-center">
       {loading && <Loader />} {/* Show the loader while loading */}
       <VideoDialog open={open} handleClose={handleClose} />
+      
       <div className="absolute flex w-screen h-screen bg-[url('/mob.png')] bg-center sm:bg-[url('/bg.svg')] bg-cover bg-no-repeat"></div>
+      <div className="stars"></div>
       <div className="pl-10 z-10 flex flex-col -mt-36 sm:-mt-52 items-center justify-center relative">
-        <div id="evolution_in_progress" >
-          <p className="text-center text-white tracking-[0.1rem] sm:tracking-[0.5rem] scale-95 p-2 mb-2 text-base sm:text-lg">
-            EVOLUTION IN PROGRESS
-          </p>
+      <div id="evolution_in_progress" className="text-center text-white tracking-[0.1rem] sm:tracking-[0.5rem] scale-95 p-2 mb-2 text-base sm:text-lg">
+          {applyFlickerEffect("EVOLUTION", flickerDelays)}
+          <span>&nbsp;</span> {/* Space between words */}
+          {applyFlickerEffect("IN", flickerDelays)}
+          <span>&nbsp;</span> {/* Space between words */}
+          {applyFlickerEffect("PROGRESS", flickerDelays)}
         </div>
         <div id="excel_2024" className="">
           <img
-            src="/LOGO2024.png"  // Corrected path to the image in public folder
+            src="/image.jpg"  // Corrected path to the image in public folder
             alt="Excel 2024"
-            className="border-0.125rem border-[#339DDC] shadow-[0_0_0.5rem_#3696CF]  w-32 h-16 sm:w-32 sm:h-16 lg:w-48 lg:h-24 tracking-custom-wide" // Adjust dimensions as needed
+            className="  w-32 h-16 sm:w-32 sm:h-16 lg:w-52 lg:h-20 tracking-custom-wide" // Adjust dimensions as needed
+            // border-0.125rem border-[#339DDC] shadow-[0_0_0.5rem_#3696CF]
           />
         </div>
-
         {/* video button */}
-        <div className="video_btn absolute top-48 right-0.25 mb-10 flex items-center justify-center">
+        <div className="cursor-pointer video_btn absolute top-48 right-0.25 mb-10 flex items-center justify-center rounded-full transition-shadow duration-300 hover:bg-sky-600 hover:shadow-[0_40px_80px_rgba(59,130,246,0.6)] hover:shadow-blue-500/30">
           <div
-            className={`
-              play relative w-20 h-20 bg-gradient-radial from-[#339DDC] via-[#065c62] to-[#065c62] rounded-full flex items-center justify-center shadow-[0px_0.94rem_1.56rem_#8e9b9e66] transition-all duration-500 ${open ? 'shadow-[0px_0px_0px_150vh_var(--themeColour)]' : ''}`}
+            className={`pop-up play relative w-20 h-20 bg-gradient-radial from-[rgb(102,207,255)] via-[#065c62] to-[#065c62] rounded-full flex items-center justify-center shadow-[0px_0.94rem_1.56rem_#8e9b9e66] transition-all duration-500 ${open ? 'shadow-[0px_0px_0px_150vh_var(--themeColour)]' : ''}`}
             onClick={handleClick}
           >
             <div className="absolute inset-0 flex items-center justify-center">
@@ -128,7 +144,7 @@ export default function Home() {
         />
       </a>
     </div>
-        <div id="legend_logos" className="flex">
+    <div id="legend_logos" className="flex">
           <a href="https://2018.excelmec.org/" target="_blank">
             <Image
               src='/legacy/excel2018.png'
