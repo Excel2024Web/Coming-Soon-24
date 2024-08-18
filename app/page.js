@@ -58,7 +58,7 @@ export default function Home() {
           <span>&nbsp;</span> {/* Space between words */}
           {applyFlickerEffect("PROGRESS", flickerDelays)}
         </div>
-        <div id="excel_2024" className="">
+        <div id="excel_2024" className="expand">
           <img
             src="/image.jpg"  // Corrected path to the image in public folder
             alt="Excel 2024"
