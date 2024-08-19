@@ -63,7 +63,7 @@ export default function Home() {
           <img
             src="/LOGONEW.png"  // Corrected path to the image in public folder
             alt="Excel 2024"
-            className="  w-32 h-16 sm:w-32 sm:h-16 lg:w-52 lg:h-20 tracking-custom-wide" // Adjust dimensions as needed
+            className="bigger w-32 h-16 sm:w-32 sm:h-16 lg:w-52 lg:h-20 tracking-custom-wide" // Adjust dimensions as needed
             // border-0.125rem border-[#339DDC] shadow-[0_0_0.5rem_#3696CF]
           />
         </div>
