@@ -6,6 +6,11 @@ import Image from "next/image";
 import VideoDialog from './video';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Loader from './loader';  // Import the Loader component
+import LinkedInIcon from '@/public/icons/svg/linkedin'; 
+import FacebookIcon from '@/public/icons/svg/facebook';
+import IconButton from '@mui/material/IconButton';
+import InstagramIcon from '@/public/icons/svg/instagram';
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -48,7 +53,7 @@ export default function Home() {
       {loading && <Loader />} {/* Show the loader while loading */}
       <VideoDialog open={open} handleClose={handleClose} />
       
-      <div className="absolute flex w-screen h-screen bg-center bg-cover bg-no-repeat bg-[url('/mobnew.png')] sm:bg-[url('/lapnew.png')]"></div>
+      <div className="absolute flex w-screen h-screen bg-center bg-cover bg-no-repeat bg-[url('/mobnew.png')] sm:bg-[url('/bgdark.png')]"></div>
 
       <div className="stars"></div>
       <div className="pl-10 z-10 flex flex-col -mt-36 sm:-mt-52 items-center justify-center relative">
@@ -85,19 +90,13 @@ export default function Home() {
         className="z-10 px-4 absolute bottom-4 flex flex-col sm:flex-row gap-y-2 items-center justify-between w-full "
       >
         <div id="social_logos" className="flex gap-1.5 justify-center">
-      <a
-        href="https://www.facebook.com/excelmec"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="w-12 h-12 rounded-full flex items-center justify-center bg-gray-800  hover:bg-red-50 transition-colors"
+        <a 
+        href="https://facebook.com" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="w-[50px] h-[50px] rounded-full flex items-center justify-center bg-gray-600 hover:bg-gray-400 transition-colors"
       >
-        <Image
-          src='/icons/icons8-facebook.svg'
-          alt="Facebook"
-          width={20} // Adjust size as needed
-          height={20} // Adjust size as needed
-          className=" shadow-[8px_8px_8px_rgba(0,0,0,0.5)] hover:shadow-[6px_6px_12px_rgba(0,0,0,0.5)] transition-shadow"
-        />
+        <FaFacebookF className="text-xl" style={{ color: 'white', textShadow: '6px 6px 5px rgb(0, 0, 0)' }} />
       </a>
 
       <a
@@ -120,14 +119,14 @@ export default function Home() {
         target="_blank"
         rel="noopener noreferrer"
         className="w-12 h-12 rounded-full flex items-center justify-center  bg-gray-800    hover:bg-red-50 transition-colors"
-      >
-        <Image
-          src='/icons/icons8-instagram.svg'
-          alt="Instagram"
-          width={20} // Adjust size as needed
-          height={20} // Adjust size as needed
-          className="text-[#3696CF] shadow-[8px_8px_8px_rgba(0,0,0,0.5)] hover:shadow-[6px_6px_12px_rgba(0,0,0,0.5)] transition-shadow"
-        />
+      ><Image
+      src='/icons/icons8-instagram.svg'
+      alt="Twitter"
+      width={20} // Adjust size as needed
+      height={20} // Adjust size as needed
+      className=" shadow-[8px_8px_8px_rgba(0,0,0,0.5)] hover:shadow-[6px_6px_12px_rgba(0,0,0,0.5)] transition-shadow"
+    />
+    
       </a>
 
       <a
@@ -136,13 +135,17 @@ export default function Home() {
         rel="noopener noreferrer"
         className="w-12 h-12 rounded-full flex items-center justify-center  bg-gray-800    hover:bg-red-50 transition-colors"
       >
-        <Image
-          src='/icons/icons8-linkedin.svg'
-          alt="LinkedIn"
-          width={20} // Adjust size as needed
-          height={20} // Adjust size as needed
-          className=" shadow-[8px_8px_8px_rgba(0,0,0,0.5)] hover:shadow-[6px_6px_12px_rgba(0,0,0,0.5)] transition-shadow "
-        />
+        <div className="flex gap-1.5 justify-center">
+            <IconButton
+                target="_blank"
+                rel="noopener noreferrer"
+                color="primary">
+                <LinkedInIcon />
+            </IconButton>
+         
+         </div>
+  
+
       </a>
     </div>
     <div id="legend_logos" className="flex">
