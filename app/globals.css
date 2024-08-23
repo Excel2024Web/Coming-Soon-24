@@ -1,6 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: 'Groupe';
+  src: url('../public/GROUPE-MEDIUM.eot');
+  src: url('../public/GROUPE-MEDIUM.eot?#iefix') format('embedded-opentype'),
+  url('../public/groupe.otf') format('opentype'),
+      url('../public/GROUPE-MEDIUM.woff2') format('woff2'),
+      url('../public/GROUPE-MEDIUM.woff') format('woff'),
+      url('../public/GROUPE-MEDIUM.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -121,6 +133,8 @@ body {
   display: inline-block;
   animation: flicker 3s linear infinite;
 }
-/* styles.css */
+#evolution_in_progress{
+  font-family: 'Groupe', sans-serif;
+}
 
 
