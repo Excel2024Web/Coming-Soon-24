@@ -90,7 +90,7 @@ export default function Home() {
       >
         <div id="social_logos" className="mt-4 flex gap-1.5 justify-center">
         <a 
-        href="https://facebook.com" 
+        href="https://www.facebook.com/excelmec" 
         target="_blank" 
        rel="noopener noreferrer"
         className="w-10 h-10 circle-border bg-glass rounded-full flex items-center justify-center  bg-gray-800    hover:bg-red-50 transition-colors"
