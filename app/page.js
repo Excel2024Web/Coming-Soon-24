@@ -52,17 +52,17 @@ export default function Home() {
       <div className="absolute flex w-screen h-screen bg-center bg-cover bg-no-repeat bg-[url('/mobnew.png')] sm:bg-[url('/bgdark.png')]"></div>
 
       <div className="stars"></div>
-      <div className="pl-10 z-10 flex flex-col -mt-36 sm:-mt-52 items-center justify-center relative">
-      <div id="evolution_in_progress" className="text-center text-white tracking-[0.1rem] sm:tracking-[0.5rem] scale-95 p-2 mr-5 -mt-4.8 -mb-0.5 text-base sm:text-lg">
+      <div className="pl-10 z-10 flex flex-col mr-2 mb-1 sm:-mt-52 items-center justify-center relative">
+      <div id="evolution_in_progress" className="text-center text-white tracking-[0.1rem] sm:tracking-[0.5rem] scale-95 p-2 mr-3.5 -mt-4.8 -ml-2 mb-0.5 text-base sm:text-lg">
           {applyFlickerEffect("evolution", flickerDelays)}
           <span>&nbsp;</span> {/* Space between words */}
           {applyFlickerEffect("in", flickerDelays)}
           <span>&nbsp;</span> {/* Space between words */}
           {applyFlickerEffect("progress", flickerDelays)}
         </div>
-        <div id="excel_2024" className="expand">
+        <div id="excel_2024 " className="expand mt-1">
           <Image
-          width={400}
+          width={240}
           height={250}
             src="/LOGONEW.png"  // Corrected path to the image in public folder
             alt="Excel 2024"
@@ -71,9 +71,9 @@ export default function Home() {
           />
         </div>
         {/* video button */}
-        <div className="cursor-pointer video_btn absolute top-48 right-0.25 mb-10 flex items-center justify-center  transition-shadow duration-300 hover:bg-sky-600 hover:shadow-[0_40px_80px_rgba(59,130,246,0.6)] hover:shadow-blue-500/30 transform scale-50">
+        <div className="cursor-pointer video_btn absolute top-48 right-0.25 mb-10 flex items-center justify-center  transition-shadow duration-300 transform scale-50">
           <div
-            className={`mt-3 rounded-lg pop-up play relative w-24 h-24 bg-gradient-radial from-[rgb(133,102,255)] via-[#250662] to-[#590662] flex items-center justify-center shadow-[0px_0.94rem_1.56rem_#8e9b9e66] transition-all duration-500 ${open ? 'shadow-[0px_0px_0px_150vh_var(--themeColour)]' : ''}`}
+            className={`mt-3 bg-glassmorphism rounded-lg pop-up play relative w-24 h-24 bg-gradient-radial from-[rgb(133,102,255)] via-[#250662] to-[#590662] flex items-center justify-center shadow-[0px_0.94rem_1.56rem_#8e9b9e66] transition-all duration-500 ${open ? 'shadow-[0px_0px_0px_150vh_var(--themeColour)]' : ''}`}
             onClick={handleClick}
           >
             <div className="absolute inset-0 flex items-center justify-center">
@@ -88,12 +88,12 @@ export default function Home() {
         id="logos"
         className=" -translate-x-2 -translate-y-1 z-10 px-4 absolute bottom-4 flex flex-col sm:flex-row gap-y-2 items-center justify-between w-full "
       >
-        <div id="social_logos" className="flex gap-1.5 justify-center">
+        <div id="social_logos" className="mt-4 flex gap-1.5 justify-center">
         <a 
         href="https://facebook.com" 
         target="_blank" 
        rel="noopener noreferrer"
-        className="w-12 h-12 rounded-full flex items-center justify-center  bg-gray-800    hover:bg-red-50 transition-colors"
+        className="w-10 h-10 bg-glass rounded-full flex items-center justify-center  bg-gray-800    hover:bg-red-50 transition-colors"
       >
          <Image
           src='/icons/icons8-facebook.svg'
@@ -108,7 +108,7 @@ export default function Home() {
         href="https://twitter.com/excelmec"
         target="_blank"
         rel="noopener noreferrer"
-        className="w-12 h-12 rounded-full flex items-center justify-center  bg-gray-800    hover:bg-red-50 transition-colors"
+        className="w-10 h-10 bg-glass rounded-full flex items-center justify-center  bg-gray-800    hover:bg-red-50 transition-colors"
       >
         <Image
           src='/icons/icons8-twitterx.svg'
@@ -123,13 +123,13 @@ export default function Home() {
         href="https://www.instagram.com/excelmec/"
         target="_blank"
         rel="noopener noreferrer"
-        className="w-12 h-12 rounded-full flex items-center justify-center  bg-gray-800    hover:bg-red-50 transition-colors"
+        className="w-10 h-10 bg-glass rounded-full flex items-center justify-center  bg-gray-800    hover:bg-red-50 transition-colors"
       ><Image
       src='/icons/icons8-instagram.svg'
       alt="Twitter"
       width={20} // Adjust size as needed
       height={20} // Adjust size as needed
-      className=" shadow-[8px_8px_8px_rgba(0,0,0,0.5)] hover:shadow-[6px_6px_12px_rgba(0,0,0,0.5)] transition-shadow"
+      className="  shadow-[8px_8px_8px_rgba(0,0,0,0.5)] hover:shadow-[6px_6px_12px_rgba(0,0,0,0.5)] transition-shadow"
     />
     
       </a>
@@ -138,7 +138,7 @@ export default function Home() {
         href="https://www.linkedin.com/company/excelmec/"
         target="_blank"
         rel="noopener noreferrer"
-        className="w-12 h-12 rounded-full flex items-center justify-center  bg-gray-800    hover:bg-red-50 transition-colors"
+        className="w-10 h-10 bg-glass rounded-full flex items-center justify-center  bg-gray-800    hover:bg-red-50 transition-colors"
       >
         <div className="flex gap-1.5 justify-center">
             <IconButton
