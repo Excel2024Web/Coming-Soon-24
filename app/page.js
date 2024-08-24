@@ -71,7 +71,7 @@ export default function Home() {
           />
         </div>
         {/* video button */}
-        <div className=" transform scale-90 cursor-pointer video_btn absolute top-60 right-0.25 mb-10 flex items-center justify-center  transition-shadow duration-300 ">
+        <div className=" transform scale-50 cursor-pointer video_btn absolute top-60 right-0.25 mb-10 flex items-center justify-center  transition-shadow duration-300 ">
           <div
             className={` bg-glassmorphism rounded-lg pop-up play relative w-24 h-24 bg-gradient-radial from-[rgb(133,102,255)] via-[#250662] to-[#590662] flex items-center justify-center shadow-[0px_0.94rem_1.56rem_#8e9b9e66] transition-all duration-500 ${open ? 'shadow-[0px_0px_0px_150vh_var(--themeColour)] ' : ''}`}
             onClick={handleClick}
