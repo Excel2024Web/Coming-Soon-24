@@ -86,7 +86,7 @@ export default function Home() {
 
       <div
         id="logos"
-        className=" -translate-x-2 -translate-y-1 z-10 px-4 absolute bottom-4 flex flex-col sm:flex-row gap-y-2 items-center justify-between w-full "
+        className=" translate-x-0 sm:-translate-x-2 -translate-y-1 z-10 px-4 absolute bottom-4 flex flex-col sm:flex-row gap-y-2 items-center justify-between w-full "
       >
         <div id="social_logos" className="mt-4 flex gap-1.5 justify-center">
         <a 
@@ -207,7 +207,7 @@ export default function Home() {
   <Image
     src="/legacy/excel2022.svg"
     alt="Excel 2022"
-    width={40}
+    width={42}
     height={40}
     lassName=" mt-2 object-contain w-12 h-12 sm:w-16 sm:h-16"
   />
@@ -222,7 +222,7 @@ export default function Home() {
   <Image
     src="/legacy/excellogo-2023.png"
     alt="Excel 2023"
-    width={58}
+    width={63}
     height={50}
   />
 </a>
