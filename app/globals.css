@@ -173,5 +173,8 @@ body {
     transform: rotate(360deg);
   }
 }
+#evolution_in_progress{
+  font-family: 'Groupe', sans-serif;
+}
 
 
