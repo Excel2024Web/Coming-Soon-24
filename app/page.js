@@ -52,28 +52,28 @@ export default function Home() {
       <div className="absolute flex w-screen h-screen bg-center bg-cover bg-no-repeat bg-[url('/mobnew.png')] sm:bg-[url('/bgdark.png')]"></div>
 
       <div className="stars"></div>
-      <div className="pl-10 z-10 flex flex-col mr-2 mb-1  sm:-mt-52 items-center justify-center relative">
-      <div id="evolution_in_progress" className="transform scale-75 text-center text-white tracking-[0.1rem] sm:tracking-[0.5rem] scale-95 p-2 mr-3.5  -ml-2  text-base sm:text-lg">
+      <div className=" z-10 flex flex-col transform scale-75 sm:-mt-52 items-center justify-center relative">
+      <div id="evolution_in_progress" className=" text-center mb-3 text-white tracking-[0.1rem] sm:tracking-[0.5rem]     text-base sm:text-lg">
           {applyFlickerEffect("evolution", flickerDelays)}
           <span>&nbsp;</span> {/* Space between words */}
           {applyFlickerEffect("in", flickerDelays)}
           <span>&nbsp;</span> {/* Space between words */}
           {applyFlickerEffect("progress", flickerDelays)}
         </div>
-        <div id="excel_2024 " className="transform scale-75 expand mt-1">
+        <div id="excel_2024 " className="transform  expand ">
           <Image
-          width={340}
+          width={250}
           height={250}
             src="/LOGONEW.png"  // Corrected path to the image in public folder
             alt="Excel 2024"
-            className="bigger -mt-1 mr-5" // Adjust dimensions as needed
+            className="bigger " // Adjust dimensions as needed
             // border-0.125rem border-[#339DDC] shadow-[0_0_0.5rem_#3696CF]
           />
         </div>
         {/* video button */}
-        <div className="cursor-pointer video_btn absolute top-48 right-0.25 mb-10 flex items-center justify-center  transition-shadow duration-300 transform scale-50">
+        <div className="  cursor-pointer video_btn absolute top-48 right-0.25 mb-10 flex items-center justify-center  transition-shadow duration-300 transform scale-50">
           <div
-            className={`mt-3 bg-glassmorphism rounded-lg pop-up play relative w-24 h-24 bg-gradient-radial from-[rgb(133,102,255)] via-[#250662] to-[#590662] flex items-center justify-center shadow-[0px_0.94rem_1.56rem_#8e9b9e66] transition-all duration-500 ${open ? 'shadow-[0px_0px_0px_150vh_var(--themeColour)]' : ''}`}
+            className={` bg-glassmorphism rounded-lg pop-up play relative w-24 h-24 bg-gradient-radial from-[rgb(133,102,255)] via-[#250662] to-[#590662] flex items-center justify-center shadow-[0px_0.94rem_1.56rem_#8e9b9e66] transition-all duration-500 ${open ? 'shadow-[0px_0px_0px_150vh_var(--themeColour)] ' : ''}`}
             onClick={handleClick}
           >
             <div className="absolute inset-0 flex items-center justify-center">
