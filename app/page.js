@@ -52,17 +52,17 @@ export default function Home() {
       <div className="absolute flex w-screen h-screen bg-center bg-cover bg-no-repeat bg-[url('/mobnew.png')] sm:bg-[url('/bgdark.png')]"></div>
 
       <div className="stars"></div>
-      <div className="pl-10 z-10 flex flex-col mr-2 mb-1 sm:-mt-52 items-center justify-center relative">
-      <div id="evolution_in_progress" className="text-center text-white tracking-[0.1rem] sm:tracking-[0.5rem] scale-95 p-2 mr-3.5 -mt-4.8 -ml-2 mb-0.5 text-base sm:text-lg">
+      <div className="pl-10 z-10 flex flex-col mr-2 mb-1  sm:-mt-52 items-center justify-center relative">
+      <div id="evolution_in_progress" className="transform scale-75 text-center text-white tracking-[0.1rem] sm:tracking-[0.5rem] scale-95 p-2 mr-3.5  -ml-2  text-base sm:text-lg">
           {applyFlickerEffect("evolution", flickerDelays)}
           <span>&nbsp;</span> {/* Space between words */}
           {applyFlickerEffect("in", flickerDelays)}
           <span>&nbsp;</span> {/* Space between words */}
           {applyFlickerEffect("progress", flickerDelays)}
         </div>
-        <div id="excel_2024 " className="expand mt-1">
+        <div id="excel_2024 " className="transform scale-75 expand mt-1">
           <Image
-          width={240}
+          width={340}
           height={250}
             src="/LOGONEW.png"  // Corrected path to the image in public folder
             alt="Excel 2024"
@@ -100,7 +100,7 @@ export default function Home() {
           alt="Twitter"
           width={20} // Adjust size as needed
           height={20} // Adjust size as needed
-          className=" shadow-[8px_8px_8px_rgba(0,0,0,0.5)] hover:shadow-[6px_6px_12px_rgba(0,0,0,0.5)] transition-shadow"
+          
         />
       </a>
 
@@ -115,7 +115,7 @@ export default function Home() {
           alt="Twitter"
           width={20} // Adjust size as needed
           height={20} // Adjust size as needed
-          className=" shadow-[8px_8px_8px_rgba(0,0,0,0.5)] hover:shadow-[6px_6px_12px_rgba(0,0,0,0.5)] transition-shadow"
+          
         />
       </a>
 
@@ -129,8 +129,7 @@ export default function Home() {
       alt="Twitter"
       width={20} // Adjust size as needed
       height={20} // Adjust size as needed
-      className="  shadow-[8px_8px_8px_rgba(0,0,0,0.5)] hover:shadow-[6px_6px_12px_rgba(0,0,0,0.5)] transition-shadow"
-    />
+      />
     
       </a>
 

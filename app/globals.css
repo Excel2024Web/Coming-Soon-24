@@ -187,10 +187,10 @@ body {
 }
 
 .bg-glass{
-  background: rgba(71, 63, 71, 0); /* Violet tint with semi-transparency */
+  background: rgba(110, 104, 110, 0); /* Violet tint with semi-transparency */
   border-radius: 100%; /* Rounded corners for circular shape */
   backdrop-filter: blur(10px); /* Blurs the content behind the element */
   -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
-  box-shadow: 0 4px 6px rgba(110, 107, 107, 0.1); /* Subtle shadow for depth */
+  box-shadow: 0 4px 6px rgba(88, 78, 78, 0); /* Subtle shadow for depth */
  
 }
