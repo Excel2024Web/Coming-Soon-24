@@ -93,7 +93,7 @@ export default function Home() {
         href="https://facebook.com" 
         target="_blank" 
        rel="noopener noreferrer"
-        className="w-10 h-10 bg-glass rounded-full flex items-center justify-center  bg-gray-800    hover:bg-red-50 transition-colors"
+        className="w-10 h-10 circle-border bg-glass rounded-full flex items-center justify-center  bg-gray-800    hover:bg-red-50 transition-colors"
       >
          <Image
           src='/icons/icons8-facebook.svg'
@@ -108,7 +108,7 @@ export default function Home() {
         href="https://twitter.com/excelmec"
         target="_blank"
         rel="noopener noreferrer"
-        className="w-10 h-10 bg-glass rounded-full flex items-center justify-center  bg-gray-800    hover:bg-red-50 transition-colors"
+        className="w-10 h-10 bg-glass circle-border  rounded-full flex items-center justify-center  bg-gray-800    hover:bg-red-50 transition-colors"
       >
         <Image
           src='/icons/icons8-twitterx.svg'
@@ -123,7 +123,7 @@ export default function Home() {
         href="https://www.instagram.com/excelmec/"
         target="_blank"
         rel="noopener noreferrer"
-        className="w-10 h-10 bg-glass rounded-full flex items-center justify-center  bg-gray-800    hover:bg-red-50 transition-colors"
+        className="w-10 h-10 bg-glass circle-border  rounded-full flex items-center justify-center  bg-gray-800    hover:bg-red-50 transition-colors"
       ><Image
       src='/icons/icons8-instagram.svg'
       alt="Twitter"
@@ -137,7 +137,7 @@ export default function Home() {
         href="https://www.linkedin.com/company/excelmec/"
         target="_blank"
         rel="noopener noreferrer"
-        className="w-10 h-10 bg-glass rounded-full flex items-center justify-center  bg-gray-800    hover:bg-red-50 transition-colors"
+        className="w-10 h-10 bg-glass circle-border  rounded-full flex items-center justify-center  bg-gray-800    hover:bg-red-50 transition-colors"
       >
         <div className="flex gap-1.5 justify-center">
             <IconButton

@@ -159,10 +159,10 @@ body {
 }
 
 .circle-border {
-  border: 3px solid transparent;
-  border: 5px solid rgba(140, 114, 196, 0.8); /* Purple color */
+  
+  border: 0.5px solid rgba(140, 114, 196, 0.8); 
   border-radius: 50%;
-  animation: rotate 2s linear infinite;
+ 
 }
 
 @keyframes rotate {
