@@ -53,7 +53,7 @@ export default function Home() {
 
       <div className="stars"></div>
       <div className=" z-10 flex flex-col transform scale-100 sm:-mt-52 items-center justify-center relative">
-      <div id="evolution_in_progress" className=" text-center mb-3 text-white tracking-[0.1rem] sm:tracking-[0.4rem]     text-base sm:text-lg">
+      <div id="evolution_in_progress" className=" text-center mb-3 text-white tracking-[0.1rem] sm:tracking-[0.3rem]     text-base sm:text-lg">
           {applyFlickerEffect("evolution", flickerDelays)}
           <span>&nbsp;</span> {/* Space between words */}
           {applyFlickerEffect("in", flickerDelays)}
