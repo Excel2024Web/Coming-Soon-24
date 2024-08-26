@@ -52,15 +52,15 @@ export default function Home() {
       <div className="absolute flex w-screen h-screen bg-center bg-cover bg-no-repeat bg-[url('/mobviolet.jpg')] sm:bg-[url('/bgdark.png')]"></div>
 
       <div className="stars"></div>
-      <div className=" z-10 flex flex-col transform scale-100 sm:-mt-52 items-center justify-center relative">
-      <div id="evolution_in_progress" className=" text-center mb-3 text-white tracking-[0.1rem] sm:tracking-[0.3rem]     text-base sm:text-lg">
+      <div className=" z-10 flex flex-col transform scale-110 mb-44 sm:mb-44  items-center justify-center relative">
+      <div id="evolution_in_progress" className=" text-center mb-2 text-white tracking-[0.1rem] sm:tracking-[0.3rem]     text-base sm:text-lg">
           {applyFlickerEffect("evolution", flickerDelays)}
           <span>&nbsp;</span> {/* Space between words */}
           {applyFlickerEffect("in", flickerDelays)}
           <span>&nbsp;</span> {/* Space between words */}
           {applyFlickerEffect("progress", flickerDelays)}
         </div>
-        <div id="excel_2024 " className=" expand ">
+        <div id="excel_2024 " className=" expand mb-4 ">
           <Image
           width={250}
           height={250}
@@ -71,9 +71,9 @@ export default function Home() {
           />
         </div>
         {/* video button */}
-        <div className=" transform scale-50 cursor-pointer video_btn absolute top-60 right-0.25 mb-10 flex items-center justify-center  transition-shadow duration-300 ">
+        <div className=" transform scale-50 cursor-pointer video_btn absolute top-60 right-0.25 -mt-24 sm:-mt-20 flex items-center justify-center  transition-shadow duration-300 ">
           <div
-            className={` bg-glassmorphism rounded-lg pop-up play relative w-24 h-24 bg-gradient-radial from-[rgb(133,102,255)] via-[#250662] to-[#590662] flex items-center justify-center shadow-[0px_0.94rem_1.56rem_#8e9b9e66] transition-all duration-500 ${open ? 'shadow-[0px_0px_0px_150vh_var(--themeColour)] ' : ''}`}
+            className={` bg-glassmorphism rounded-lg pop-up play relative w-24 h-24  bg-gradient-radial from-[rgb(133,102,255)] via-[#250662] to-[#590662] flex items-center justify-center shadow-[0px_0.94rem_1.56rem_#8e9b9e66] transition-all duration-500 ${open ? 'shadow-[0px_0px_0px_150vh_var(--themeColour)] ' : ''}`}
             onClick={handleClick}
           >
             <div className="absolute inset-0 flex items-center justify-center">
@@ -86,7 +86,7 @@ export default function Home() {
 
       <div
         id="logos"
-        className=" translate-x-0 sm:-translate-x-2 -translate-y-1 z-10 px-4 absolute bottom-4 flex flex-col sm:flex-row gap-y-2 items-center justify-between w-full "
+        className=" translate-x-0 sm:translate-x-0 -translate-y-1 z-10 px-4 transform scale-100 absolute bottom-4 flex flex-col sm:flex-row gap-y-2 items-center justify-between w-full "
       >
         <div id="social_logos" className="mt-4 flex gap-1.5 justify-center">
         <a 
@@ -216,13 +216,13 @@ export default function Home() {
 <a 
   href="https://2023.excelmec.org/" 
   target="_blank" 
-  className='mt-2'
+  className='mt-1.5'
   // Adjust padding
 >
   <Image
     src="/legacy/excellogo-2023.png"
     alt="Excel 2023"
-    width={63}
+    width={61}
     height={50}
   />
 </a>
