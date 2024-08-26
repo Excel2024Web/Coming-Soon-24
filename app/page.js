@@ -52,7 +52,7 @@ export default function Home() {
       <div className="absolute flex w-screen h-screen bg-center bg-cover bg-no-repeat bg-[url('/mobviolet.jpg')] sm:bg-[url('/bgdark.png')]"></div>
 
       <div className="stars"></div>
-      <div className=" z-10 flex flex-col transform scale-110 mb-44 sm:mb-44  items-center justify-center relative">
+      <div className=" z-10 flex flex-col transform scale-90 mb-32 sm:mb-32  items-center justify-center relative">
       <div id="evolution_in_progress" className=" text-center mb-2 text-white tracking-[0.1rem] sm:tracking-[0.3rem]     text-base sm:text-lg">
           {applyFlickerEffect("evolution", flickerDelays)}
           <span>&nbsp;</span> {/* Space between words */}
@@ -60,7 +60,7 @@ export default function Home() {
           <span>&nbsp;</span> {/* Space between words */}
           {applyFlickerEffect("progress", flickerDelays)}
         </div>
-        <div id="excel_2024 " className=" expand mb-4 ">
+        <div id="excel_2024 " className="transform scale-75 expand mb-4 ">
           <Image
           width={250}
           height={250}
