@@ -77,11 +77,11 @@ export default function Home() {
             onClick={handleClick}
           >
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="relative w-0 h-0 border-l-[1.56rem] border-l-white border-t-[0.94rem] border-t-transparent border-b-[0.94rem] border-b-transparent transform translate-x-[4px]"></div>
+              <div  className="relative w-0 h-0 border-l-[1.56rem] border-l-white border-t-[0.94rem] border-t-transparent border-b-[0.94rem] border-b-transparent transform translate-x-[4px]"></div>
             </div>
           </div>
         </div>
-
+    
       </div>
 
       <div
