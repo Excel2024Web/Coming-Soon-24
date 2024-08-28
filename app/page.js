@@ -49,18 +49,18 @@ export default function Home() {
       {loading && <Loader />} {/* Show the loader while loading */}
       <VideoDialog open={open} handleClose={handleClose} />
       
-      <div className="absolute flex w-screen h-screen bg-center bg-cover bg-no-repeat bg-[url('/mobviolet.jpg')] sm:bg-[url('/bgdark.png')]"></div>
+      <div className="absolute flex w-screen h-screen bg-center bg-cover bg-no-repeat bg-[url('/moblatest.png')] sm:bg-[url('/bgdark.png')]"></div>
 
       <div className="stars"></div>
-      <div className=" z-10 flex flex-col transform scale-90 mb-32 sm:mb-32  items-center justify-center relative">
-      <div id="evolution_in_progress" className=" text-center mb-2 text-white tracking-[0.1rem] sm:tracking-[0.3rem]     text-base sm:text-lg">
+      <div className=" z-10 flex flex-col transform scale-90 mb-80 sm:mb-32  items-center justify-center relative">
+      <div id="evolution_in_progress" className=" text-center -mb-2 sm:mb-2 text-white tracking-[0.1rem] sm:tracking-[0.3rem]     text-base sm:text-lg">
           {applyFlickerEffect("evolution", flickerDelays)}
           <span>&nbsp;</span> {/* Space between words */}
           {applyFlickerEffect("in", flickerDelays)}
           <span>&nbsp;</span> {/* Space between words */}
           {applyFlickerEffect("progress", flickerDelays)}
         </div>
-        <div id="excel_2024 " className="transform scale-75 expand mb-4 ">
+        <div id="excel_2024 " className="transform scale-75   expand mb-4 ">
           <Image
           width={250}
           height={250}
@@ -71,9 +71,9 @@ export default function Home() {
           />
         </div>
         {/* video button */}
-        <div className=" transform scale-50 cursor-pointer video_btn absolute top-60 right-0.25 -mt-24 sm:-mt-20 flex items-center justify-center  transition-shadow duration-300 ">
+        <div className=" transform scale-50  cursor-pointer video_btn absolute top-60 right-0.25 -mt-24 sm:-mt-20 flex items-center justify-center  transition-shadow duration-300 ">
           <div
-            className={` bg-glassmorphism rounded-lg pop-up play relative w-24 h-24  bg-gradient-radial from-[rgb(133,102,255)] via-[#250662] to-[#590662] flex items-center justify-center shadow-[0px_0.94rem_1.56rem_#8e9b9e66] transition-all duration-500 ${open ? 'shadow-[0px_0px_0px_150vh_var(--themeColour)] ' : ''}`}
+            className={` bg-glassmorphism rounded-lg pop-up play ml-16 -mb-3 sm:ml-0 sm:mb-0 relative w-24 h-24  bg-gradient-radial from-[rgb(133,102,255)] via-[#250662] to-[#590662] flex items-center justify-center shadow-[0px_0.94rem_1.56rem_#8e9b9e66] transition-all duration-500 ${open ? 'shadow-[0px_0px_0px_150vh_var(--themeColour)] ' : ''}`}
             onClick={handleClick}
           >
             <div className="absolute inset-0 flex items-center justify-center">
