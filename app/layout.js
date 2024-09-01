@@ -13,7 +13,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link
+          rel="icon"
+          href="/favicon.png"  // Correct path for PNG favicon
+          sizes="any"
+          type="image/png"
+        />
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
       </Head>
