@@ -52,7 +52,7 @@ export default function Home() {
       <div className="absolute flex w-screen h-screen bg-center bg-cover bg-no-repeat bg-[url('/mobile1.png')] sm:bg-[url('/bgdark.png')]"></div>
 
       <div className="stars"></div>
-      <div className=" z-10 flex flex-col transform scale-100 mt-2 sm:mb-32  items-center justify-center relative">
+      <div className=" z-10 flex flex-col transform scale-90 mt-2 sm:mb-32  items-center justify-center relative">
       <div id="evolution_in_progress" className=" text-center -mb-3 mt-3  sm:mb-2 transform scale-90 text-white tracking-[0.1rem] sm:tracking-[0.3rem]     text-base sm:text-lg">
           {applyFlickerEffect("evolution", flickerDelays)}
           <span>&nbsp;</span> {/* Space between words */}
