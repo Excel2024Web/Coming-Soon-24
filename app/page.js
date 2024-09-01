@@ -49,7 +49,7 @@ export default function Home() {
       {loading && <Loader />} {/* Show the loader while loading */}
       <VideoDialog open={open} handleClose={handleClose} />
       
-      <div className="absolute flex w-screen h-screen bg-center bg-cover bg-no-repeat bg-[url('/mobile2.png')] sm:bg-[url('/bgdark.png')]"></div>
+      <div className="absolute flex w-screen h-screen bg-center bg-cover bg-no-repeat bg-[url('/mobile3.png')] sm:bg-[url('/bgdark.png')]"></div>
 
       <div className="stars"></div>
       <div className=" z-10 flex flex-col transform scale-75 mt-5 sm:mb-20  items-center justify-center relative">
