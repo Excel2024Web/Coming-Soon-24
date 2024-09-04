@@ -3,10 +3,10 @@ import React, { useState, useEffect } from 'react';
 import Image from "next/image";
 import VideoDialog from './video';
 import Loader from './loader';  // Import the Loader component
-import LinkedInIcon from '@/public/icons/svg/linkedin'; 
-import FacebookIcon from '@/public/icons/svg/facebook';
+import LinkedInIcon from '@/public/icons/linkedin'; 
+
 import IconButton from '@mui/material/IconButton';
-import InstagramIcon from '@/public/icons/svg/instagram';
+
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -49,7 +49,7 @@ export default function Home() {
       {loading && <Loader />} {/* Show the loader while loading */}
       <VideoDialog open={open} handleClose={handleClose} />
       
-      <div className="absolute flex w-screen h-screen bg-center bg-cover bg-no-repeat bg-[url('/mobile3.png')] sm:bg-[url('/bgdark.png')]"></div>
+      <div className="absolute flex w-screen h-screen bg-center bg-cover bg-no-repeat bg-[url('/bg/mobile3.png')] sm:bg-[url('/bg/bgdark.png')]"></div>
 
       <div className="stars"></div>
       <div className=" z-10 flex flex-col transform scale-75 mb-20 mt-2 sm: sm:-mt-14  items-center justify-center relative">
@@ -64,7 +64,7 @@ export default function Home() {
           <Image
           width={170}
           height={200}
-            src="/Group_2111.svg"  // Corrected path to the image in public folder
+            src="/bg/excel2023.svg"  // Corrected path to the image in public folder
             alt="Excel 2024"
             className="bigger sm:w-[390px] sm:h-[180px]" // Adjust dimensions as needed
             // border-0.125rem border-[#339DDC] shadow-[0_0_0.5rem_#3696CF]
