@@ -26,7 +26,7 @@ const VideoDialog = ({ handleClose, open }) => {
         backdrop: {
           style: {
             opacity: 0.5,
-            background: "linear-gradient(to right, #F16BF3, #339DDC)",
+            background: "linear-gradient(135deg, #F16BF3, #339DDC)",
           },
         },
       }}
