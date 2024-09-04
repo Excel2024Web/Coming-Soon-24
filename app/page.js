@@ -54,11 +54,11 @@ export default function Home() {
       <div className="stars"></div>
       <div className=" z-10 flex flex-col transform scale-75 mb-20 mt-2 sm: sm:-mt-14  items-center justify-center relative">
       <div id="evolution_in_progress" className=" text-center mb-0.25 mt-2  sm:mb-1  text-white tracking-[0.1rem] sm:tracking-[0.3rem]   text-md sm:text-2xl">
-          {applyFlickerEffect("evolution", flickerDelays)}
+          {applyFlickerEffect("EVOLUTION", flickerDelays)}
           <span>&nbsp;</span> {/* Space between words */}
-          {applyFlickerEffect("in", flickerDelays)}
+          {applyFlickerEffect("IN", flickerDelays)}
           <span>&nbsp;</span> {/* Space between words */}
-          {applyFlickerEffect("progress", flickerDelays)}
+          {applyFlickerEffect("PROGRESS", flickerDelays)}
         </div>
         <div id="excel_2024 " className="transform scale-90   expand mb-32 mt-1.5 sm:mt-2 ">
           <Image
@@ -160,7 +160,7 @@ export default function Home() {
     </div>
     <div id="legend_logos" className="flex">
           <a href="https://2018.excelmec.org/" target="_blank"
-          className='mt-3 mr-2'>
+          className='mt-3 bg-glass1 mr-2'>
             <Image
               src='/legacy/excel2018.png'
               alt="Excel 2018"
@@ -170,7 +170,7 @@ export default function Home() {
             />
           </a>
           <a href="https://2019.excelmec.org/" target="_blank"
-          className='mt-3 mr-1'>
+          className='mt-3 bg-glass1 mr-1'>
             <Image
                src='/legacy/excel2019.png'
               alt="Excel 2019"
@@ -180,7 +180,7 @@ export default function Home() {
             />
           </a>
           <a href="https://2020.excelmec.org/" target="_blank"
-          className='mt-3 mr-3'>
+          className='mt-3 bg-glass1 mr-3'>
             <Image
              width={50}
              height={45}
@@ -193,7 +193,7 @@ export default function Home() {
                <a 
   href="https://2021.excelmec.org/"
   target="_blank" 
-  className='mt-3 mr-3'
+  className='mt-3 bg-glass1 mr-3'
    // Adjust padding
 >
   <Image
@@ -207,7 +207,7 @@ export default function Home() {
           <a 
   href="https://2022.excelmec.org/" 
   target="_blank" 
-  className='mt-3 -mr-1'
+  className='mt-3 bg-glass1 -mr-1'
    // Adjust padding
 >
   <Image
@@ -222,7 +222,7 @@ export default function Home() {
 <a 
   href="https://2023.excelmec.org/" 
   target="_blank" 
-  className='mt-1.5'
+  className='bg-glass1 mt-1.5'
   // Adjust padding
 >
   <Image
