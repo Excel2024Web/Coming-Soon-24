@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'sm-md': { 'min': '540px', 'max': '640px' },  // Custom range between 540px and 640px
+      },
       letterSpacing: {
         'custom-wide': '0.75rem',
         'custom-wider': '0.75em',

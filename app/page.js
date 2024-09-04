@@ -49,39 +49,39 @@ export default function Home() {
       {loading && <Loader />} {/* Show the loader while loading */}
       <VideoDialog open={open} handleClose={handleClose} />
       
-      <div className="absolute flex w-screen h-screen bg-center bg-cover bg-no-repeat bg-[url('/mobviolet.jpg')] sm:bg-[url('/bgdark.png')]"></div>
+      <div className="absolute flex w-screen h-screen bg-center bg-cover bg-no-repeat bg-[url('/mobile3.png')] sm:bg-[url('/bgdark.png')]"></div>
 
       <div className="stars"></div>
-      <div className=" z-10 flex flex-col transform scale-90 mb-32 sm:mb-32  items-center justify-center relative">
-      <div id="evolution_in_progress" className=" text-center mb-2 text-white tracking-[0.1rem] sm:tracking-[0.3rem]     text-base sm:text-lg">
+      <div className=" z-10 flex flex-col transform scale-75 mb-20 mt-2 sm: sm:-mt-14  items-center justify-center relative">
+      <div id="evolution_in_progress" className=" text-center mb-0.25 mt-2  sm:mb-2  text-white tracking-[0.1rem] sm:tracking-[0.3rem]   text-md sm:text-2xl">
           {applyFlickerEffect("evolution", flickerDelays)}
           <span>&nbsp;</span> {/* Space between words */}
           {applyFlickerEffect("in", flickerDelays)}
           <span>&nbsp;</span> {/* Space between words */}
           {applyFlickerEffect("progress", flickerDelays)}
         </div>
-        <div id="excel_2024 " className="transform scale-75 expand mb-4 ">
+        <div id="excel_2024 " className="transform scale-90   expand mb-32 mt-1.5 sm:mt-2 ">
           <Image
-          width={250}
-          height={250}
+          width={170}
+          height={200}
             src="/LOGONEW.png"  // Corrected path to the image in public folder
             alt="Excel 2024"
-            className="bigger " // Adjust dimensions as needed
+            className="bigger sm:w-[390px] sm:h-[180px]" // Adjust dimensions as needed
             // border-0.125rem border-[#339DDC] shadow-[0_0_0.5rem_#3696CF]
           />
         </div>
         {/* video button */}
-        <div className=" transform scale-50 cursor-pointer video_btn absolute top-60 right-0.25 -mt-24 sm:-mt-20 flex items-center justify-center  transition-shadow duration-300 ">
+        <div className=" transform scale-50 ml-2  sm:h-30 sm:w-30 sm:top-62   cursor-pointer video_btn absolute top-60 right-0.25 left-0.25 -mt-24 sm:mt-12 sm:-mb-2 flex items-center justify-center  transition-shadow duration-300 ">
           <div
-            className={` bg-glassmorphism rounded-lg pop-up play relative w-24 h-24  bg-gradient-radial from-[rgb(133,102,255)] via-[#250662] to-[#590662] flex items-center justify-center shadow-[0px_0.94rem_1.56rem_#8e9b9e66] transition-all duration-500 ${open ? 'shadow-[0px_0px_0px_150vh_var(--themeColour)] ' : ''}`}
+            className={` bg-glassmorphism w-20 h-20   rounded-lg pop-up play ml-4 mb-15 mr-5 sm:ml-4 sm:mt-16 sm:mb-24   relative  bg-gradient-radial from-[rgb(133,102,255)] via-[#250662] to-[#590662] flex items-center justify-center shadow-[0px_0.94rem_1.56rem_#8e9b9e66] transition-all duration-500 ${open ? 'shadow-[0px_0px_0px_150vh_var(--themeColour)] ' : ''}`}
             onClick={handleClick}
           >
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="relative w-0 h-0 border-l-[1.56rem] border-l-white border-t-[0.94rem] border-t-transparent border-b-[0.94rem] border-b-transparent transform translate-x-[4px]"></div>
+              <div  className="relative w-0 h-0 border-l-[1.56rem] border-l-white border-t-[0.94rem] border-t-transparent border-b-[0.94rem] border-b-transparent transform translate-x-[4px]"></div>
             </div>
           </div>
         </div>
-
+    
       </div>
 
       <div

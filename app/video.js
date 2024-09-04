@@ -45,7 +45,7 @@ const VideoDialog = ({ handleClose, open }) => {
           className="w-full h-auto"
         >
           <source
-            src="https://storage.googleapis.com/excel-mec-2023-static-8267634/aftermovie2022-h264.mp4"
+            src="https://storage.googleapis.com/logo-launch/Excel%202024%20coming%20soon.mp4"
             type="video/mp4"
           />
         </video>
