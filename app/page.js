@@ -3,10 +3,10 @@ import React, { useState, useEffect } from 'react';
 import Image from "next/image";
 import VideoDialog from './video';
 import Loader from './loader';  // Import the Loader component
-import LinkedInIcon from '@/public/icons/svg/linkedin'; 
-import FacebookIcon from '@/public/icons/svg/facebook';
+import LinkedInIcon from '@/public/icons/linkedin'; 
+
 import IconButton from '@mui/material/IconButton';
-import InstagramIcon from '@/public/icons/svg/instagram';
+
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -49,11 +49,11 @@ export default function Home() {
       {loading && <Loader />} {/* Show the loader while loading */}
       <VideoDialog open={open} handleClose={handleClose} />
       
-      <div className="absolute flex w-screen h-screen bg-center bg-cover bg-no-repeat bg-[url('/mobile3.png')] sm:bg-[url('/bgdark.png')]"></div>
+      <div className="absolute flex w-screen h-screen bg-center bg-cover bg-no-repeat bg-[url('/bg/mobile3.png')] sm:bg-[url('/bg/bgdark.png')]"></div>
 
       <div className="stars"></div>
       <div className=" z-10 flex flex-col transform scale-75 mb-20 mt-2 sm: sm:-mt-14  items-center justify-center relative">
-      <div id="evolution_in_progress" className=" text-center mb-0.25 mt-2  sm:mb-2  text-white tracking-[0.1rem] sm:tracking-[0.3rem]   text-md sm:text-2xl">
+      <div id="evolution_in_progress" className=" text-center mb-0.25 mt-2  sm:mb-1  text-white tracking-[0.1rem] sm:tracking-[0.3rem]   text-md sm:text-2xl">
           {applyFlickerEffect("evolution", flickerDelays)}
           <span>&nbsp;</span> {/* Space between words */}
           {applyFlickerEffect("in", flickerDelays)}
@@ -64,7 +64,7 @@ export default function Home() {
           <Image
           width={170}
           height={200}
-            src="/LOGONEW.png"  // Corrected path to the image in public folder
+            src="/bg/excel2023.svg"  // Corrected path to the image in public folder
             alt="Excel 2024"
             className="bigger sm:w-[390px] sm:h-[180px]" // Adjust dimensions as needed
             // border-0.125rem border-[#339DDC] shadow-[0_0_0.5rem_#3696CF]
@@ -73,11 +73,11 @@ export default function Home() {
         {/* video button */}
         <div className=" transform scale-50 ml-2  sm:h-30 sm:w-30 sm:top-62   cursor-pointer video_btn absolute top-60 right-0.25 left-0.25 -mt-24 sm:mt-12 sm:-mb-2 flex items-center justify-center  transition-shadow duration-300 ">
           <div
-            className={` bg-glassmorphism w-20 h-20   rounded-lg pop-up play ml-4 mb-15 mr-5 sm:ml-4 sm:mt-16 sm:mb-24   relative  bg-gradient-radial from-[rgb(133,102,255)] via-[#250662] to-[#590662] flex items-center justify-center shadow-[0px_0.94rem_1.56rem_#8e9b9e66] transition-all duration-500 ${open ? 'shadow-[0px_0px_0px_150vh_var(--themeColour)] ' : ''}`}
+            className={` bg-glassmorphism w-20 h-20   rounded-lg pop-up play ml-4 mb-12 mr-5 sm:ml-4 sm:mt-6 sm:mb-24 sm:w-24 sm:h-24  relative  bg-gradient-radial from-[rgb(133,102,255)] via-[#250662] to-[#590662] flex items-center justify-center shadow-[0px_0.94rem_1.56rem_#8e9b9e66] transition-all duration-500 ${open ? 'shadow-[0px_0px_0px_150vh_var(--themeColour)] ' : ''}`}
             onClick={handleClick}
           >
             <div className="absolute inset-0 flex items-center justify-center">
-              <div  className="relative w-0 h-0 border-l-[1.56rem] border-l-white border-t-[0.94rem] border-t-transparent border-b-[0.94rem] border-b-transparent transform translate-x-[4px]"></div>
+              <div  className="relative w-0 h-0 border-l-[1.62rem] border-l-white border-t-[0.98rem] border-t-transparent border-b-[0.98rem] border-b-transparent transform translate-x-[4px]"></div>
             </div>
           </div>
         </div>
@@ -139,6 +139,12 @@ export default function Home() {
         rel="noopener noreferrer"
         className="w-10 h-10 bg-glass circle-border  rounded-full flex items-center justify-center  bg-gray-800    hover:bg-red-50 transition-colors"
       >
+        {/* <Image
+      src='/icons/icons8-linkedin.svg'
+      alt="Twitter"
+      width={20} // Adjust size as needed
+      height={20} // Adjust size as needed
+      /> */}
         <div className="flex gap-1.5 justify-center">
             <IconButton
                 target="_blank"

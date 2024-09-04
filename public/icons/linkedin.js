@@ -5,7 +5,7 @@ const LinkedInIcon = (props) => (
   <SvgIcon {...props} viewBox="0 0 30 30">
     <defs>
       <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" style={{ stopColor: '#C630C9', stopOpacity: 1 }} />
+        <stop offset="0%" style={{ stopColor: '#F16BF3', stopOpacity: 1 }} />
         <stop offset="100%" style={{ stopColor: '#339DDC', stopOpacity: 1 }} />
       </linearGradient>
       {/* Define SVG filter for shadow */}
