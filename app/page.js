@@ -94,7 +94,7 @@ export default function Home() {
       </div>
       <div
         id="logos"
-        className=" translate-x-0 sm:translate-x-0 -translate-y-1 z-10 px-4 transform scale-100 absolute bottom-4 flex flex-col sm:flex-row gap-y-2 items-center justify-between w-full "
+        className=" translate-x-0 sm:translate-x-0 -translate-y-1 z-10 px-4 transform scale-100 absolute bottom-4 flex flex-col sm:flex-row gap-y-0 sm:gap-y-2 items-center justify-between w-full "
       >
         <div id="social_logos" className="mt-4 flex gap-1.5 justify-center">
           <a
