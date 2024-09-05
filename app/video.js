@@ -1,8 +1,8 @@
-'use client';
-import React, { useRef } from "react";
-import { Dialog } from "@mui/material";
+"use client";
+import React, {useRef} from "react";
+import {Dialog} from "@mui/material";
 
-const VideoDialog = ({ handleClose, open }) => {
+const VideoDialog = ({handleClose, open}) => {
   const videoRef = useRef(null);
 
   const handleVideoClick = () => {
@@ -45,7 +45,7 @@ const VideoDialog = ({ handleClose, open }) => {
           className="w-full h-auto"
         >
           <source
-            src="https://storage.googleapis.com/logo-launch/aftermov23.mov"
+            src="https://storage.googleapis.com/excel-prod-static-24/Atermovie%20final.mp4"
             type="video/mp4"
           />
         </video>
