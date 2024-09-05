@@ -179,13 +179,34 @@ body {
 }
 
 .bg-glassmorphism {
-  background: rgba(1, 0, 61, 0.351);
+  background: rgba(1, 0, 61, 0.5);
   /* background: rgba(29, 28, 29, 0.75); */
   border-radius: 100%; /* Rounded corners for circular shape */
   backdrop-filter: blur(10px); /* Blurs the content behind the element */
   -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   border: 1px solid rgba(255, 255, 255, 0.2); /* Slightly transparent white border */
+}
+
+.video_btn {
+  cursor: pointer;
+  animation-name: beat;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: center;
+  transition-delay: 0.75s;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(0.53);
+  }
+  50% {
+    transform: scale(0.55);
+  }
+  100% {
+    transform: scale(0.53);
+  }
 }
 
 .bg-glass {
