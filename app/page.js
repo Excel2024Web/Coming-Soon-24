@@ -73,7 +73,7 @@ export default function Home() {
         {/* video button */}
         <div className=" transform scale-50 ml-2  sm:h-30 sm:w-30 sm:top-62   cursor-pointer video_btn absolute top-60 right-0.25 left-0.25 -mt-24 sm:mt-12 sm:-mb-2 flex items-center justify-center  transition-shadow duration-300 ">
           <div
-            className={` bg-glassmorphism w-20 h-20   rounded-lg pop-up play ml-4 mb-12 mr-5 sm:ml-4 sm:mt-6 sm:mb-24 sm:w-24 sm:h-24  relative  bg-gradient-radial from-[rgb(133,102,255)] via-[#250662] to-[#590662] flex items-center justify-center shadow-[0px_0.94rem_1.56rem_#8e9b9e66] transition-all duration-500 ${open ? 'shadow-[0px_0px_0px_150vh_var(--themeColour)] ' : ''}`}
+            className={` bg-glassmorphism w-24 h-24 sm:h-28 sm:w-28    rounded-lg pop-up play ml-4 mb-12 mr-5 sm:ml-4 sm:mt-6 sm:mb-24  relative  bg-gradient-radial from-[rgb(133,102,255)] via-[#250662] to-[#590662] flex items-center justify-center shadow-[0px_0.94rem_1.56rem_#8e9b9e66] transition-all duration-500 ${open ? 'shadow-[0px_0px_0px_150vh_var(--themeColour)] ' : ''}`}
             onClick={handleClick}
           >
             <div className="absolute inset-0 flex items-center justify-center">
@@ -98,6 +98,7 @@ export default function Home() {
          <Image
           src='/icons/icons8-facebook.svg'
           alt="Twitter"
+          className=''
           width={20} // Adjust size as needed
           height={20} // Adjust size as needed
           
@@ -158,7 +159,7 @@ export default function Home() {
 
       </a>
     </div>
-    <div id="legend_logos" className="flex">
+    <div id="legend_logos" className="flex transform scale-90">
           <a href="https://2018.excelmec.org/" target="_blank"
           className='mt-3 bg-glass1 mr-2'>
             <Image
@@ -166,6 +167,7 @@ export default function Home() {
               alt="Excel 2018"
               width={40}
               height={30}
+              className=''
               
             />
           </a>
@@ -176,6 +178,7 @@ export default function Home() {
               alt="Excel 2019"
               width={50}
               height={45}
+              
              
             />
           </a>
