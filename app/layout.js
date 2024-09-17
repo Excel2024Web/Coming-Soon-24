@@ -6,7 +6,7 @@ import Script from "next/script"; // Import Script component
 const inter = Inter({subsets: ["latin"]});
 
 export const metadata = {
-  title: "Excel 2024",
+  title: "Excel 2024 ",
   description:
     "Coming Soon Website of Excel 2024, the annual national-level technical symposium of Govt. Model Engineering College, Kochi.",
 };
