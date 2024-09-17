@@ -2,13 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 @font-face {
-  font-family: 'Groupe';
-  src: url('../public/font/GROUPE-MEDIUM.eot');
-  src: url('../public/font/GROUPE-MEDIUM.eot?#iefix') format('embedded-opentype'),
-  url('../public/font/groupe.otf') format('opentype'),
-      url('../public/font/GROUPE-MEDIUM.woff2') format('woff2'),
-      url('../public/font/GROUPE-MEDIUM.woff') format('woff'),
-      url('../public/font/GROUPE-MEDIUM.ttf') format('truetype');
+  font-family: "Groupe";
+  src: url("../public/font/GROUPE-MEDIUM.eot");
+  src: url("../public/font/GROUPE-MEDIUM.eot?#iefix")
+      format("embedded-opentype"),
+    url("../public/font/groupe.otf") format("opentype"),
+    url("../public/font/GROUPE-MEDIUM.woff2") format("woff2"),
+    url("../public/font/GROUPE-MEDIUM.woff") format("woff"),
+    url("../public/font/GROUPE-MEDIUM.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -60,10 +61,9 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url('../public/bg/star.jpg');
+  background: url("../public/bg/star.jpg");
   animation: twinkling 6s forwards ease-out;
 }
-
 
 @keyframes expand {
   0% {
@@ -73,7 +73,6 @@ body {
     transform: scale(1);
   }
 }
-
 
 .bigger {
   animation: expand 2s 1 forwards ease-in-out;
@@ -147,7 +146,11 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(128, 90, 213, 0.6) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(128, 90, 213, 0.6) 0%,
+    transparent 70%
+  );
   transform: translate(-50%, -50%) scale(1.2);
   z-index: -1;
   opacity: 0;
@@ -159,10 +162,8 @@ body {
 }
 
 .circle-border {
-  
-  border: 0.5px solid rgba(140, 114, 196, 0.8); 
+  border: 0.5px solid rgba(140, 114, 196, 0.8);
   border-radius: 50%;
- 
 }
 
 @keyframes beat {
@@ -184,12 +185,13 @@ body {
     transform: rotate(360deg);
   }
 }
-#evolution_in_progress{
-  font-family: 'Groupe', sans-serif;
+#evolution_in_progress {
+  font-family: "Groupe", sans-serif;
 }
 
 .bg-glassmorphism {
-  background: rgba(1, 0, 61, 0.351); /* Violet tint with semi-transparency */
+  background: rgba(1, 0, 61, 0.351);
+  /* background: rgba(29, 28, 29, 0.75); */
   border-radius: 100%; /* Rounded corners for circular shape */
   backdrop-filter: blur(10px); /* Blurs the content behind the element */
   -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
@@ -197,21 +199,19 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.2); /* Slightly transparent white border */
 }
 
-.bg-glass{
+.bg-glass {
   background: rgba(110, 104, 110, 0); /* Violet tint with semi-transparency */
   border-radius: 100%; /* Rounded corners for circular shape */
   backdrop-filter: blur(10px); /* Blurs the content behind the element */
   -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
   box-shadow: 0 4px 6px rgba(88, 78, 78, 0); /* Subtle shadow for depth */
- 
 }
-.bg-glass1{
- 
+.bg-glass1 {
 }
-.bg-g{
+.bg-g {
   background: rgba(121, 83, 121, 0); /* Violet tint with semi-transparency */
   border-radius: 50%; /* Rounded corners for circular shape */
-  backdrop-filter: blur(10px);  /* Blurs the content behind the element */
+  backdrop-filter: blur(10px); /* Blurs the content behind the element */
   -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
   box-shadow: 0 4px 6px rgba(88, 78, 78, 0); /* Subtle shadow for depth */
 }
