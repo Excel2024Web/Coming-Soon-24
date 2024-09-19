@@ -196,6 +196,7 @@ body {
   -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   border: 1px solid rgba(255, 255, 255, 0.2); /* Slightly transparent white border */
+  background: radial-gradient(229.65% 772.86% at -8.28% 116.91%, rgba(255, 231, 224, 0) 5.44%, #99809092 30%);
 }
 
 .video_btn {
