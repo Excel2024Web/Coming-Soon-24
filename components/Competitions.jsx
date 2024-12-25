@@ -98,7 +98,9 @@ const Competitions = () => {
           <div className="absolute lg:left-[23%] md:left-[30%] w-2 bg-[#D9D9D9] h-5/6 opacity-15"></div>
           <div className="w-3/4 h-full flex items-start justify-center flex-wrap gap-5 px- pb-10 overflow-y-auto">
             <div className="flex flex-col items-center justify-center gap-5">
-              <button className="bg-[#d9d9d925] md:w-[15rem] md:h-[15rem] lg:w-[20rem] lg:h-[20rem]  rounded-bl-[6rem] rounded-tr-[6rem] relative cursor-pointer">
+              <button className="bg-[#d9d9d925] md:w-[15rem] md:h-[15rem] lg:w-[20rem] lg:h-[20rem]  rounded-bl-[6rem] rounded-tr-[6rem] relative cursor-pointer"
+                onClick={() => setOpenCard(true)}
+              >
               </button>
                 <h1 className=" font-Michroma text-xl bottom-[-2rem] ">Defuse</h1>
             </div>

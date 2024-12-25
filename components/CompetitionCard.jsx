@@ -24,7 +24,7 @@ const CompetitionCard = ({openCard, setOpenCard , eventData}) => {
             >
 
                 <div
-                    className={"card-main  bg-gray-900 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 w-7/12 h-[65%] p-5 text-2xl flex flex-row "}
+                    className={"card-main  bg-gray-900 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 w-7/12 h-[65%] p-5 text-2xl flex flex-row"}
                     onClick={(e) => e.stopPropagation()}
                 >
                     <div className={"w-1/5 h-full bg-transparent flex flex-col items-start justify-center mr-20"}>
