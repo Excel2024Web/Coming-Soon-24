@@ -135,15 +135,27 @@ const Competitions = () => {
           <div className="w-full md:w-3/4 h-full flex flex-col md:flex-row items-center md:items-start justify-center gap-5  pb-10 overflow-hidden">
             <div className="flex flex-col items-center justify-center gap-5">
               <button
-                  className="bg-[#d9d9d925] w-[15rem] h-[15rem] md:w-[15rem] md:h-[15rem] lg:w-[20rem] lg:h-[20rem]  rounded-bl-[6rem] rounded-tr-[6rem] relative cursor-pointer"
-                  onClick={() => setOpenCard(true)}
+                  className="bg-[#d9d9d925] w-[15rem] h-[15rem] md:w-[15rem] md:h-[15rem] lg:w-[20rem] lg:h-[20rem]  rounded-bl-[6rem] rounded-tr-[6rem] relative cursor-pointer flex justify-center items-center"
+                  onClick={() => {
+                    setEventData(events[0]);
+                    setOpenCard(true);
+                  }}
               >
+                <Image
+                  src="/bg/robosoccer.png"
+                  width={70}
+                  height={70}
+                 alt={"robosoccer"}
+                  className={"w-7/12"}
+                >
+                </Image>
               </button>
-              <h1 className=" font-Michroma text-xl bottom-[-2rem] ">Defuse</h1>
+
+              <h1 className=" font-Michroma text-xl bottom-[-2rem] ">Robosoccer</h1>
             </div>
             <div className="flex flex-col items-center justify-center gap-5">
               <button
-                  className="bg-[#d9d9d925]  w-[15rem] h-[15rem] md:w-[15rem] md:h-[15rem] lg:w-[20rem] lg:h-[20rem]  rounded-bl-[6rem] rounded-tr-[6rem] relative cursor-pointer"
+                className="bg-[#d9d9d925]  w-[15rem] h-[15rem] md:w-[15rem] md:h-[15rem] lg:w-[20rem] lg:h-[20rem]  rounded-bl-[6rem] rounded-tr-[6rem] relative cursor-pointer"
                   onClick={() => setOpenCard(true)}
               >
               </button>
