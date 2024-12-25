@@ -29,10 +29,10 @@ const CompetitionCard = ({openCard, setOpenCard , eventData}) => {
             >
 
                 <div
-                    className={"card-main bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 w-full h-full p-5 text-2xl flex flex-col sm:flex-row sm:w-7/12 sm:h-[65%] sm:rounded-xl overflow-scroll"}
+                    className={"card-main bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 w-full h-full p-5 text-2xl flex flex-col md:flex-row md:w-7/12 md:h-[65%] md:rounded-xl overflow-scroll"}
                     onClick={(e) => e.stopPropagation()}
                 >
-                    <div className={"w-1/5 h-full bg-transparent hidden sm:flex flex-row sm:flex-col items-start justify-center mr-20"}>
+                    <div className={"w-1/5 h-full bg-transparent hidden md:flex flex-row md:flex-col items-start justify-center mr-20"}>
                         <div className={"w-full h-1/2 bg-transparent flex flex-col grid-cols-1 items-start justify-start m-5"}>
                             <div
                                 className={"link-container bg-transparent w-fit h-1/2 flex items-center justify-start cursor-pointer box-border px-5" + `${selected === 0 ? " clipped bg-white bg-opacity-30  rounded-xl" : ""}`}
@@ -67,7 +67,7 @@ const CompetitionCard = ({openCard, setOpenCard , eventData}) => {
                         </div>
                     </div>
                     <div
-                        className={"sm:hidden w-screen absolute left-0 top-0 p-2 mb-10 flex flex-col items-center justify-center bg-gray-100 bg-opacity-20"}
+                        className={"md:hidden w-screen absolute left-0 top-0 p-2 mb-10 flex flex-col items-center justify-center bg-gray-100 bg-opacity-20"}
                         onClick={() => setMenu(!menu)}
                     >
                         <div
@@ -111,27 +111,27 @@ const CompetitionCard = ({openCard, setOpenCard , eventData}) => {
                             Close
                         </div>
                     </div>
-                    <div className={"sm:hidden " + (menu ? "mb-72" : "mb-20")}/>
+                    <div className={"md:hidden " + (menu ? "mb-72" : "mb-20")}/>
                     {selected === 0 && (
                         <div
-                            className={"w-full sm:w-4/5 min-h-full bg-transparent flex flex-col items-center justify-between"}>
-                            <div className={"w-fit px-10 py-5 flex flex-col items-center justify-start text-lg sm:text-2xl clipped bg-gray-50 bg-opacity-30 rounded-xl"}>
+                            className={"w-full md:w-4/5 min-h-full bg-transparent flex flex-col items-center justify-between"}>
+                            <div className={"w-fit px-10 py-5 flex flex-col items-center justify-start text-lg md:text-2xl clipped bg-gray-50 bg-opacity-30 rounded-xl"}>
                                 <h1 className={"text-xl"}>{eventData.name}</h1>
                                 <h1 className={"text-pink-500"}>{"Prize Pool : " + eventData.prize}</h1>
                             </div>
-                            <div className={"w-full h-fit flex text-center text-lg sm:text-2xl sm:text-left flex-col items-center justify-start"}>
+                            <div className={"w-full h-fit flex text-center text-lg md:text-2xl md:text-left flex-col items-center justify-start"}>
                                 <p>{eventData.description}</p>
                             </div>
-                            <div className={"w-full sm:h-1/4 flex flex-col sm:flex-row items-center justify-between text-lg sm:text-xl gap-5"}>
-                                <div className={"w-full sm:w-1/2 h-fit py-5 flex sm:flex-col items-center  gap-3 sm:gap-0  justify-center bg-gray-100 bg-opacity-20 clipped rounded-xl"}>
+                            <div className={"w-full md:h-1/4 flex flex-col md:flex-row items-center justify-between text-lg md:text-xl gap-5"}>
+                                <div className={"w-full md:w-1/2 h-fit py-5 flex md:flex-col items-center  gap-3 md:gap-0  justify-center bg-gray-100 bg-opacity-20 clipped rounded-xl"}>
                                     <h2 className={"text-pink-500"}>Venue</h2>
                                     <p>{eventData.venue}</p>
                                 </div>
-                                <div className={"w-full sm:w-1/2 h-fit py-5 flex sm:flex-col items-center gap-3 sm:gap-0 justify-center bg-gray-100 bg-opacity-20 clipped rounded-xl"}>
+                                <div className={"w-full md:w-1/2 h-fit py-5 flex md:flex-col items-center gap-3 md:gap-0 justify-center bg-gray-100 bg-opacity-20 clipped rounded-xl"}>
                                     <h2 className={"text-pink-500"}>Time</h2>
                                     <p>{eventData.time}</p>
                                 </div>
-                                <div className={"w-full sm:w-1/2 h-fit py-5 flex sm:flex-col items-center gap-3 sm:gap-0  justify-center bg-gray-100 bg-opacity-20 clipped rounded-xl"}>
+                                <div className={"w-full md:w-1/2 h-fit py-5 flex md:flex-col items-center gap-3 md:gap-0  justify-center bg-gray-100 bg-opacity-20 clipped rounded-xl"}>
                                     <h2 className={"text-pink-500"}>Date</h2>
                                     <p>{eventData.date}</p>
                                 </div>
@@ -139,7 +139,7 @@ const CompetitionCard = ({openCard, setOpenCard , eventData}) => {
 
                         </div>)}
                     {selected === 1 && (
-                        <div className={"w-full sm:w-4/5 h-full bg-transparent flex flex-col items-center justify-start overflow-scroll text-xl"}>
+                        <div className={"w-full md:w-4/5 h-full bg-transparent flex flex-col items-center justify-start overflow-scroll text-xl"}>
                             {eventData.format.map((format) => (
                                 <div className={"w-full flex flex-col items-start justify-start my-5 text-wrap"}>
                                     <h1 className={"bg-gray-100 clipped p-2 bg-opacity-20"}>{format.name}</h1>
@@ -155,14 +155,9 @@ const CompetitionCard = ({openCard, setOpenCard , eventData}) => {
                     )}
                     {selected === 2 && (
                         <div
-                            className={"w-full sm:w-4/5 h-full bg-transparent flex flex-col items-center justify-start overflow-scroll text-xl"}>
-                            <div
-                                className={"hidden w-fit px-10 py-5 sm:flex flex-col items-center justify-start font-4xl clipped bg-gray-50 bg-opacity-30 rounded-xl mb-10 text-2xl"}>
-                                <h1>{eventData.name}</h1>
-                                <h1 className={"text-pink-500"}>{"Prize Pool : " + eventData.prize}</h1>
-                            </div>
+                            className={"w-full md:w-4/5 h-full bg-transparent flex flex-col items-start justify-start overflow-scroll text-xl"}>
                             {eventData.rules.map((rule) => (
-                                <div className={"justify-start items-start flex flex-row gap-3 m-1"}>
+                                <div className={"justify-start items-start flex flex-row gap-3 m-1 w-[80%]"}>
                                     <p className={"text-red-500"}>{"- "}</p>
                                     <p className={"w-11/12"}>{rule}</p>
                                 </div>
@@ -170,9 +165,9 @@ const CompetitionCard = ({openCard, setOpenCard , eventData}) => {
                         </div>
                     )}
                     {selected === 3 && (
-                        <div className={"w-full sm:w-4/5 h-full bg-transparent flex flex-col items-center justify-start"}>
+                        <div className={"w-full md:w-4/5 h-full bg-transparent flex flex-col items-center justify-start"}>
                             <div
-                                className={"w-fit px-10 py-5 hidden sm:flex flex-col items-center justify-start font-4xl clipped bg-gray-50 bg-opacity-30 rounded-xl mb-10 text-2xl"}>
+                                className={"w-fit px-10 py-5 hidden md:flex flex-col items-center justify-start font-4xl clipped bg-gray-50 bg-opacity-30 rounded-xl mb-10 text-2xl"}>
                                 <h1>{eventData.name}</h1>
                                 <h1 className={"text-pink-500"}>{"Prize Pool : " + eventData.prize}</h1>
                             </div>
@@ -193,16 +188,16 @@ const CompetitionCard = ({openCard, setOpenCard , eventData}) => {
                     )}
 
                     {selected === 4 && (
-                        <div className={"w-full sm:w-4/5 h-full bg-transparent flex flex-col items-center justify-start"}>
+                        <div className={"w-full md:w-4/5 h-full bg-transparent flex flex-col items-center justify-start"}>
                             <div
-                                className={"w-fit px-10 py-5 hidden sm:flex flex-col items-center justify-start font-4xl clipped bg-gray-50 bg-opacity-30 rounded-xl mb-10 text-2xl"}>
+                                className={"w-fit px-10 py-5 hidden md:flex flex-col items-center justify-start font-4xl clipped bg-gray-50 bg-opacity-30 rounded-xl mb-10 text-2xl"}>
                                 <h1>{eventData.name}</h1>
                                 <h1 className={"text-pink-500"}>{"Prize Pool : " + eventData.prize}</h1>
                             </div>
                             <div className={"w-full h-4/6 flex flex-col items-center justify-center"}>
-                                <button className={"w-full sm:w-1/2 h-fit p-10 bg-gray-100 bg-opacity-20 clipped rounded-xl hover:bg-pink-500 active:bg-pink-500"}>
+                                <a className={"w-full md:w-1/2 h-fit p-10 bg-gray-100 bg-opacity-20 clipped rounded-xl hover:bg-pink-500 active:bg-pink-500"}>
                                     Register
-                                </button>
+                                </a>
                             </div>
                         </div>
                     )}
