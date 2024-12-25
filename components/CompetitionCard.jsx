@@ -3,6 +3,9 @@ import {X,Phone,Mail} from "lucide-react";
 import React from "react";
 import './CompetitionCard.css';
 import {Michroma} from "next/font/google";
+import Image from "next/image";
+import { motion } from "framer-motion";
+
 
 const michroma = Michroma({
     weight: ['400'],
@@ -29,11 +32,35 @@ const CompetitionCard = ({openCard, setOpenCard , eventData}) => {
             >
 
                 <div
-                    className={"card-main bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 w-full h-full p-5 text-2xl flex flex-col md:flex-row md:w-7/12 md:h-[65%] md:rounded-xl overflow-scroll"}
+                    className={"card-main relative w-full back h-full p-10 text-2xl flex flex-col md:flex-row md:w-8/12 md:h-[65%] md:rounded-xl "}
                     onClick={(e) => e.stopPropagation()}
                 >
-                    <div className={"w-1/5 h-full bg-transparent hidden md:flex flex-row md:flex-col items-start justify-center mr-20"}>
-                        <div className={"w-full h-1/2 bg-transparent flex flex-col grid-cols-1 items-start justify-start m-5"}>
+                    {/* <Image 
+                        src="/bg/Card_bg.svg"
+                        alt={"bg"}
+                        layout={"fill"}
+                        objectFit={"contain"}
+                        className="backdrop-filter backdrop-blur-md absolute top-0 left-0 m-0"
+                    /> */}
+                    <svg width="fit" height="fit" viewBox="0 0 1556 872" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute top-0 left-0 m-0 backdrop-filter backdrop-blur-md md:flex hidden">
+                        <path d="M1206.5 1H62C28.3106 1 1 28.3106 1 62V176.5V678.381C1 701.24 13.7802 722.181 34.1099 732.632L303.043 870.889L303.258 871H303.5H353.5H1494C1527.69 871 1555 843.689 1555 810V236.679C1555 217.663 1546.13 199.735 1531.02 188.195L1286.11 1.20518L1285.84 1H1285.5H1206.5Z" fill="#D9D9D9" fill-opacity="0.1" stroke="url(#paint0_linear_1_9)" stroke-width="2"/>
+                        <defs>
+                        <linearGradient id="paint0_linear_1_9" x1="778" y1="2" x2="778" y2="870" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#211E49"/>
+                        <stop offset="0.5" stop-color="#7D7D7D"/>
+                        <stop offset="1" stop-color="#3B078B"/>
+                        </linearGradient>
+                        </defs>
+                    </svg>
+                    <div className={"w-1/5 h-full bg-transparent hidden md:flex flex-row md:flex-col items-start justify-center mr-20 z-10"}>
+                        <div className={"w-full h-4/5  bg-transparent flex flex-col grid-cols-1 items-start justify-center m-5"}>
+                            <Image
+                                src={eventData.image}
+                                alt={"bg"}
+                                width={100}
+                                height={100}
+                                className="md:flex hidden mt-[-2.5rem] rounded-full ml-5 pb-3"
+                            />
                             <div
                                 className={"link-container bg-transparent w-fit h-1/2 flex items-center justify-start cursor-pointer box-border px-5" + `${selected === 0 ? " clipped bg-white bg-opacity-30  rounded-xl" : ""}`}
                                 onClick={() => setSelected(0)}
@@ -67,7 +94,7 @@ const CompetitionCard = ({openCard, setOpenCard , eventData}) => {
                         </div>
                     </div>
                     <div
-                        className={"md:hidden w-screen absolute left-0 top-0 p-2 mb-10 flex flex-col items-center justify-center bg-gray-100 bg-opacity-20"}
+                        className={"md:hidden w-screen absolute z-10 left-0 top-0 p-2 mb-10 flex flex-col items-center justify-center bg-gray-100 bg-opacity-20"}
                         onClick={() => setMenu(!menu)}
                     >
                         <div
@@ -111,18 +138,18 @@ const CompetitionCard = ({openCard, setOpenCard , eventData}) => {
                             Close
                         </div>
                     </div>
-                    <div className={"md:hidden " + (menu ? "mb-72" : "mb-20")}/>
+                    <div className={"md:hidden z-10 " + (menu ? "mb-72" : "mb-20")}/>
                     {selected === 0 && (
                         <div
-                            className={"w-full md:w-4/5 min-h-full bg-transparent flex flex-col items-center justify-between"}>
+                            className={" details w-full z-10 md:w-4/5 min-h-full bg-transparent overflow-y-auto flex flex-col items-center justify-between"}>
                             <div className={"w-fit px-10 py-5 flex flex-col items-center justify-start text-lg md:text-2xl clipped bg-gray-50 bg-opacity-30 rounded-xl"}>
                                 <h1 className={"text-xl"}>{eventData.name}</h1>
                                 <h1 className={"text-pink-500"}>{"Prize Pool : " + eventData.prize}</h1>
                             </div>
-                            <div className={"w-full h-fit flex text-center text-base my-10 md:my-0 md:text-lg md:text-left flex-col items-center justify-start"}>
+                            <div className={"w-full h-fit flex text-center text-base my-10 md:my-0 md:text-md md:text-left flex-col items-center justify-start"}>
                                 <p>{eventData.description}</p>
                             </div>
-                            <div className={"w-full md:h-1/4 flex flex-col md:flex-row items-center justify-between text-sm md:text-lg text-center gap-5"}>
+                            <div className={"w-full md:h-1/4 flex flex-col md:flex-row items-center justify-between text-sm  md:text-sm xl:text-lg text-center gap-5"}>
                                 <div className={"w-full md:w-1/2 h-fit py-5 flex md:flex-col items-center  gap-3 md:gap-0  justify-center bg-gray-100 bg-opacity-20 clipped rounded-xl"}>
                                     <h2 className={"text-pink-500"}>Venue</h2>
                                     <p>{eventData.venue}</p>
@@ -139,7 +166,7 @@ const CompetitionCard = ({openCard, setOpenCard , eventData}) => {
 
                         </div>)}
                     {selected === 1 && (
-                        <div className={"w-full md:w-4/5 h-full bg-transparent flex flex-col items-center justify-start overflow-scroll text-base"}>
+                        <div className={"details w-full z-10 md:w-4/5 h-full bg-transparent flex flex-col items-center justify-start overflow-y-auto text-base"}>
                             {eventData.format.map((format) => (
                                 <div className={"w-full flex flex-col items-start justify-start my-5 text-wrap"}>
                                     <h1 className={"bg-gray-100 clipped p-2 bg-opacity-20"}>{format.name}</h1>
@@ -155,7 +182,7 @@ const CompetitionCard = ({openCard, setOpenCard , eventData}) => {
                     )}
                     {selected === 2 && (
                         <div
-                            className={"w-full md:w-4/5 h-full bg-transparent flex flex-col items-start justify-start overflow-scroll text-base"}>
+                            className={" details w-full z-10 md:w-4/5 h-full bg-transparent flex flex-col items-start justify-start overflow-y-auto text-base"}>
                             {eventData.rules.map((rule) => (
                                 <div className={"justify-start items-start flex flex-row gap-3 m-1 w-[80%]"}>
                                     <p className={"text-red-500"}>{"- "}</p>
@@ -165,14 +192,14 @@ const CompetitionCard = ({openCard, setOpenCard , eventData}) => {
                         </div>
                     )}
                     {selected === 3 && (
-                        <div className={"w-full md:w-4/5 h-full bg-transparent flex flex-col items-center justify-start"}>
+                        <div className={"details w-full z-10 md:w-4/5 h-full bg-transparent overflow-y-auto flex flex-col items-center justify-start"}>
                             <div
-                                className={"w-fit px-10 py-5 hidden md:flex flex-col items-center justify-start font-4xl clipped bg-gray-50 bg-opacity-30 rounded-xl mb-10 text-2xl"}>
+                                className={"w-fit px-10 py-5 hidden md:flex flex-col items-center justify-start font-4xl clipped bg-gray-50 bg-opacity-30 rounded-xl  text-2xl"}>
                                 <h1>{eventData.name}</h1>
                                 <h1 className={"text-pink-500"}>{"Prize Pool : " + eventData.prize}</h1>
                             </div>
                             <div className={"min-h-20"}/>
-                            <div className={"w-full h-fit flex flex-col gap-1 items-center justify-around"}>
+                            <div className={"w-1/2 h-fit flex flex-col gap-1 items-center justify-around"}>
                                 {eventData.contact.map((contact) => (
                                     <div className={"w-full h-1/4 flex flex-row items-center justify-center gap-5 clipped py-10 bg-gray-100 bg-opacity-20"}>
                                         <a href={"tel:" + contact.phone}><Phone className={"h-7 w-7 text-pink-500"}/></a>
@@ -188,7 +215,7 @@ const CompetitionCard = ({openCard, setOpenCard , eventData}) => {
                     )}
 
                     {selected === 4 && (
-                        <div className={"w-full md:w-4/5 h-full bg-transparent flex flex-col items-center justify-start"}>
+                        <div className={"details w-full z-10 md:w-4/5 h-full bg-transparent flex overflow-y-auto flex-col items-center justify-start"}>
                             <div
                                 className={"w-fit px-10 py-5 hidden md:flex flex-col items-center justify-start font-4xl clipped bg-gray-50 bg-opacity-30 rounded-xl mb-10 text-2xl"}>
                                 <h1>{eventData.name}</h1>
