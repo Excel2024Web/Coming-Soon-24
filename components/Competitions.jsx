@@ -17,6 +17,7 @@ const Competitions = () => {
       time: "09:30 AM - 4:40 PM",
       venue: "Amphitheatre",
       description : "Get ready for an electrifying showdown as RoboSoccer kicks off! Excel 2024 has come up with an exciting event where innovation meets strategy as manually controlled robots compete in a thrilling game of soccer. Customize your bots to unleash their potential and become the Ultimate Champion. Every match is a testament to the participants’ engineering brilliance and teamwork, as they transform ideas into action-packed reality. Climb up through three rounds of ground breaking battles to win exciting prizes.",
+      image: "/bg/robosoccer.png",
       format : [
         {
           name: "Round 1 (Preliminary)",
@@ -133,6 +134,7 @@ const Competitions = () => {
           {/*</div>*/}
           {/*<div className="absolute lg:left-[23%] md:left-[30%] w-2 bg-[#D9D9D9] h-5/6 opacity-15"></div>*/}
           <div className="w-full md:w-3/4 h-full flex flex-col md:flex-row items-center md:items-start justify-center gap-5  pb-10 overflow-hidden">
+          {events.map((event) => (
             <div className="flex flex-col items-center justify-center gap-5">
               <button
                   className="bg-[#d9d9d925] w-[15rem] h-[15rem] md:w-[15rem] md:h-[15rem] lg:w-[20rem] lg:h-[20rem]  rounded-bl-[6rem] rounded-tr-[6rem] relative cursor-pointer flex justify-center items-center"
@@ -142,7 +144,7 @@ const Competitions = () => {
                   }}
               >
                 <Image
-                  src="/bg/robosoccer.png"
+                  src={event.image}
                   width={70}
                   height={70}
                  alt={"robosoccer"}
@@ -151,8 +153,9 @@ const Competitions = () => {
                 </Image>
               </button>
 
-              <h1 className=" font-Michroma text-xl bottom-[-2rem] ">Robosoccer</h1>
+              <h1 className=" font-Michroma text-xl bottom-[-2rem] ">{event.name}</h1>
             </div>
+          ))}
             <div className="flex flex-col items-center justify-center gap-5">
               <button
                 className="bg-[#d9d9d925]  w-[15rem] h-[15rem] md:w-[15rem] md:h-[15rem] lg:w-[20rem] lg:h-[20rem]  rounded-bl-[6rem] rounded-tr-[6rem] relative cursor-pointer"
