@@ -12,74 +12,126 @@ const michroma = Michroma({
 const CompetitionCard = ({openCard, setOpenCard , eventData}) => {
 
     const [selected , setSelected] = React.useState(0);
+    const [menu , setMenu] = React.useState(false);
 
     return (
         <div className={michroma.className}>
             <div
                 className={`${
                     openCard ? "w-full h-full" : "w-0 h-0 opacity-0"
-                } fixed inset-0 z-50 flex items-center justify-center`}
+                } fixed inset-0 z-50 flex items-center justify-center bg-grey bg-opacity-50`}
 
-                onClick={() => setOpenCard(false)}
+                onClick={() => {
+                    setOpenCard(false);
+                    setMenu(false);
+                    setSelected(0);
+                }}
             >
 
                 <div
-                    className={"card-main  bg-gray-900 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 w-7/12 h-[65%] p-5 text-2xl flex flex-row"}
+                    className={"card-main bg-gray-500 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 w-full h-full p-5 text-2xl flex flex-col sm:flex-row sm:w-7/12 sm:h-[65%] sm:rounded-xl overflow-scroll"}
                     onClick={(e) => e.stopPropagation()}
                 >
-                    <div className={"w-1/5 h-full bg-transparent flex flex-col items-start justify-center mr-20"}>
+                    <div className={"w-1/5 h-full bg-transparent hidden sm:flex flex-row sm:flex-col items-start justify-center mr-20"}>
                         <div className={"w-full h-1/2 bg-transparent flex flex-col grid-cols-1 items-start justify-start m-5"}>
                             <div
-                                className={"link-container bg-transparent w-fit h-1/2 flex items-center justify-start cursor-pointer box-border px-5" + `${selected === 0 ? " clipped bg-gray-100 bg-opacity-20  rounded-xl" : ""}`}
+                                className={"link-container bg-transparent w-fit h-1/2 flex items-center justify-start cursor-pointer box-border px-5" + `${selected === 0 ? " clipped bg-white bg-opacity-30  rounded-xl" : ""}`}
                                 onClick={() => setSelected(0)}
                             >
                                 About
                             </div>
                             <div
-                                className={"link-container bg-transparent w-fit h-1/2 flex items-center justify-start cursor-pointer box-border px-5" + `${selected === 1 ? " clipped bg-gray-100 bg-opacity-20 rounded-xl" : ""}`}
+                                className={"link-container bg-transparent w-fit h-1/2 flex items-center justify-start cursor-pointer box-border px-5" + `${selected === 1 ? " clipped bg-white bg-opacity-20 rounded-xl" : ""}`}
                                 onClick={() => setSelected(1)}
                             >
                                 Format
                             </div>
                             <div
-                                className={"link-container bg-transparent w-fit h-1/2 flex items-center justify-start cursor-pointer box-border px-5" + `${selected === 2 ? " clipped bg-gray-100 bg-opacity-20   rounded-xl" : ""}`}
+                                className={"link-container bg-transparent w-fit h-1/2 flex items-center justify-start cursor-pointer box-border px-5" + `${selected === 2 ? " clipped bg-white bg-opacity-20   rounded-xl" : ""}`}
                                 onClick={() => setSelected(2)}
                             >
                                 Rules
                             </div>
                             <div
-                                className={"link-container bg-transparent w-fit h-1/2 flex items-center justify-start cursor-pointer box-border px-5" + `${selected === 3 ? " clipped bg-gray-100 bg-opacity-20  rounded-xl" : ""}`}
+                                className={"link-container bg-transparent w-fit h-1/2 flex items-center justify-start cursor-pointer box-border px-5" + `${selected === 3 ? " clipped bg-white bg-opacity-20  rounded-xl" : ""}`}
                                 onClick={() => setSelected(3)}
                             >
                                 Contacts
                             </div>
                             <div
-                                className={"link-container bg-transparent w-fit h-1/2 flex items-center justify-start cursor-pointer box-border px-5" + `${selected === 4 ? " clipped bg-gray-100 bg-opacity-20  rounded-xl" : ""}`}
+                                className={"link-container bg-transparent w-fit h-1/2 flex items-center justify-start cursor-pointer box-border px-5" + `${selected === 4 ? " clipped bg-white bg-opacity-20  rounded-xl" : ""}`}
                                 onClick={() => setSelected(4)}
                             >
-                                Results
+                                Register
                             </div>
                         </div>
                     </div>
+                    <div
+                        className={"sm:hidden w-screen absolute left-0 top-0 p-2 mb-10 flex flex-col items-center justify-center bg-gray-100 bg-opacity-20"}
+                        onClick={() => setMenu(!menu)}
+                    >
+                        <div
+                            className={((selected === 0 || menu)? "flex" : "hidden ")+ "w-full h-1/2 bg-transparent flex-row items-center justify-center m-2"}
+                            onClick={() => setSelected(0)}
+                        >
+                            About
+                        </div>
+                        <div
+                            className={((selected === 1 || menu)? "flex" : "hidden ")+ "w-full h-1/2 bg-transparent flex-row items-center justify-center m-2"}
+                            onClick={() => setSelected(1)}
+                        >
+                            Format
+                        </div>
+                        <div
+                            className={((selected === 2 || menu)? "flex" : "hidden ")+ "w-full h-1/2 bg-transparent flex-row items-center justify-center m-2"}
+                            onClick={() => setSelected(2)}
+                        >
+                            Rules
+                        </div>
+                        <div
+                            className={((selected === 3 || menu)? "flex" : "hidden ")+ "w-full h-1/2 bg-transparent flex-row items-center justify-center m-2"}
+                            onClick={() => setSelected(3)}
+                        >
+                            Contacts
+                        </div>
+                        <div
+                            className={((selected === 4 || menu)? "flex " : "hidden ")+ "w-full h-1/2 bg-transparent flex-row items-center justify-center m-2"}
+                            onClick={() => setSelected(4)}
+                        >
+                            Register
+                        </div>
+                        <div
+                            className={(menu ? "flex" : "hidden") + " w-full h-1/2 bg-transparent flex-row items-center justify-center m-2"}
+                            onClick={() => {
+                                setOpenCard(false);
+                                setMenu(false);
+                                setSelected(0);
+                            }}
+                        >
+                            Close
+                        </div>
+                    </div>
+                    <div className={"sm:hidden " + (menu ? "mb-72" : "mb-20")}/>
                     {selected === 0 && (
-                        <div className={"w-4/5 h-full bg-transparent flex flex-col items-center justify-between"}>
-                            <div className={"w-fit px-10 py-5 flex flex-col items-center justify-start font-4xl clipped bg-gray-50 bg-opacity-30 rounded-xl"}>
-                                <h1>{eventData.name}</h1>
+                        <div
+                            className={"w-full sm:w-4/5 min-h-full bg-transparent flex flex-col items-center justify-between"}>
+                            <div className={"w-fit px-10 py-5 flex flex-col items-center justify-start text-lg sm:text-2xl clipped bg-gray-50 bg-opacity-30 rounded-xl"}>
+                                <h1 className={"text-xl"}>{eventData.name}</h1>
                                 <h1 className={"text-pink-500"}>{"Prize Pool : " + eventData.prize}</h1>
                             </div>
-                            <div className={"w-full h-fit flex flex-col items-center justify-start"}>
+                            <div className={"w-full h-fit flex text-center text-lg sm:text-2xl sm:text-left flex-col items-center justify-start"}>
                                 <p>{eventData.description}</p>
                             </div>
-                            <div className={"w-full h-1/4 flex flex-row items-center justify-between text-xl gap-5"}>
-                                <div className={"w-1/2 h-fit py-5 flex flex-col items-center justify-center bg-gray-100 bg-opacity-20 clipped "}>
+                            <div className={"w-full sm:h-1/4 flex flex-col sm:flex-row items-center justify-between text-lg sm:text-xl gap-5"}>
+                                <div className={"w-full sm:w-1/2 h-fit py-5 flex sm:flex-col items-center  gap-3 sm:gap-0  justify-center bg-gray-100 bg-opacity-20 clipped rounded-xl"}>
                                     <h2 className={"text-pink-500"}>Venue</h2>
                                     <p>{eventData.venue}</p>
                                 </div>
-                                <div className={"w-1/2 h-fit py-5 flex flex-col items-center justify-center bg-gray-100 bg-opacity-20 clipped "}>
+                                <div className={"w-full sm:w-1/2 h-fit py-5 flex sm:flex-col items-center gap-3 sm:gap-0 justify-center bg-gray-100 bg-opacity-20 clipped rounded-xl"}>
                                     <h2 className={"text-pink-500"}>Time</h2>
                                     <p>{eventData.time}</p>
                                 </div>
-                                <div className={"w-1/2 h-fit py-5 flex flex-col items-center justify-center bg-gray-100 bg-opacity-20 clipped "}>
+                                <div className={"w-full sm:w-1/2 h-fit py-5 flex sm:flex-col items-center gap-3 sm:gap-0  justify-center bg-gray-100 bg-opacity-20 clipped rounded-xl"}>
                                     <h2 className={"text-pink-500"}>Date</h2>
                                     <p>{eventData.date}</p>
                                 </div>
@@ -87,9 +139,9 @@ const CompetitionCard = ({openCard, setOpenCard , eventData}) => {
 
                         </div>)}
                     {selected === 1 && (
-                        <div className={"w-4/5 h-full bg-transparent flex flex-col items-center justify-start overflow-scroll text-xl"}>
+                        <div className={"w-full sm:w-4/5 h-full bg-transparent flex flex-col items-center justify-start overflow-scroll text-xl"}>
                             {eventData.format.map((format) => (
-                                <div className={"w-full h-1/4 flex flex-col items-start justify-start my-12 text-wrap"}>
+                                <div className={"w-full flex flex-col items-start justify-start my-5 text-wrap"}>
                                     <h1 className={"bg-gray-100 clipped p-2 bg-opacity-20"}>{format.name}</h1>
                                     {format.description.map((description) => (
                                         <div className={"justify-start items-start flex flex-row gap-3 m-1"}>
@@ -103,9 +155,9 @@ const CompetitionCard = ({openCard, setOpenCard , eventData}) => {
                     )}
                     {selected === 2 && (
                         <div
-                            className={"w-4/5 h-full bg-transparent flex flex-col items-center justify-start overflow-scroll text-xl"}>
+                            className={"w-full sm:w-4/5 h-full bg-transparent flex flex-col items-center justify-start overflow-scroll text-xl"}>
                             <div
-                                className={"w-fit px-10 py-5 flex flex-col items-center justify-start font-4xl clipped bg-gray-50 bg-opacity-30 rounded-xl mb-10 text-2xl"}>
+                                className={"hidden w-fit px-10 py-5 sm:flex flex-col items-center justify-start font-4xl clipped bg-gray-50 bg-opacity-30 rounded-xl mb-10 text-2xl"}>
                                 <h1>{eventData.name}</h1>
                                 <h1 className={"text-pink-500"}>{"Prize Pool : " + eventData.prize}</h1>
                             </div>
@@ -118,9 +170,9 @@ const CompetitionCard = ({openCard, setOpenCard , eventData}) => {
                         </div>
                     )}
                     {selected === 3 && (
-                        <div className={"w-4/5 h-full bg-transparent flex flex-col items-center justify-start"}>
+                        <div className={"w-full sm:w-4/5 h-full bg-transparent flex flex-col items-center justify-start"}>
                             <div
-                                className={"w-fit px-10 py-5 flex flex-col items-center justify-start font-4xl clipped bg-gray-50 bg-opacity-30 rounded-xl mb-10 text-2xl"}>
+                                className={"w-fit px-10 py-5 hidden sm:flex flex-col items-center justify-start font-4xl clipped bg-gray-50 bg-opacity-30 rounded-xl mb-10 text-2xl"}>
                                 <h1>{eventData.name}</h1>
                                 <h1 className={"text-pink-500"}>{"Prize Pool : " + eventData.prize}</h1>
                             </div>
@@ -136,6 +188,21 @@ const CompetitionCard = ({openCard, setOpenCard , eventData}) => {
                                         </div>
                                     </div>
                                 ))}
+                            </div>
+                        </div>
+                    )}
+
+                    {selected === 4 && (
+                        <div className={"w-full sm:w-4/5 h-full bg-transparent flex flex-col items-center justify-start"}>
+                            <div
+                                className={"w-fit px-10 py-5 hidden sm:flex flex-col items-center justify-start font-4xl clipped bg-gray-50 bg-opacity-30 rounded-xl mb-10 text-2xl"}>
+                                <h1>{eventData.name}</h1>
+                                <h1 className={"text-pink-500"}>{"Prize Pool : " + eventData.prize}</h1>
+                            </div>
+                            <div className={"w-full h-4/6 flex flex-col items-center justify-center"}>
+                                <button className={"w-full sm:w-1/2 h-fit p-10 bg-gray-100 bg-opacity-20 clipped rounded-xl hover:bg-pink-500 active:bg-pink-500"}>
+                                    Register
+                                </button>
                             </div>
                         </div>
                     )}

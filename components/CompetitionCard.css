@@ -1,19 +1,12 @@
-.clipped-panel {
-    position: relative;
-    width: 100%;
-    min-height: 600px;
-    background: rgba(20, 20, 30, 0.8);
-    clip-path: url(#main-path);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: white;
-    font-family: 'Orbitron', sans-serif;
-}
 
 .card-main{
-    background-size: contain;
-    background-repeat: no-repeat;
-    border-radius: 40px;
     clip-path: polygon(0 0, 75% 0%, 100% 25%, 100% 100%, 25% 100%, 0 75%);
+}
+
+@media (max-width: 640px){
+    .card-main{
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+    }
 }
 
 .clipped{
