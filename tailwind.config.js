@@ -1,3 +1,5 @@
+const { Monomaniac_One, Michroma } = require('next/font/google');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -7,6 +9,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        Monomaniac_One: ['Monomaniac One', 'serif'],
+        Michroma: ['Michroma', 'sans-serif'],
+      },
       screens: {
         'sm-md': { 'min': '540px', 'max': '640px' },  // Custom range between 540px and 640px
       },
