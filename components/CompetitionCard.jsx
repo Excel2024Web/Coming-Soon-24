@@ -119,7 +119,7 @@ const CompetitionCard = ({openCard, setOpenCard , eventData}) => {
                                 <h1 className={"text-xl"}>{eventData.name}</h1>
                                 <h1 className={"text-pink-500"}>{"Prize Pool : " + eventData.prize}</h1>
                             </div>
-                            <div className={"w-full h-fit flex text-center text-lg my-10 md:my-0 md:text-xl md:text-left flex-col items-center justify-start"}>
+                            <div className={"w-full h-fit flex text-center text-base my-10 md:my-0 md:text-lg md:text-left flex-col items-center justify-start"}>
                                 <p>{eventData.description}</p>
                             </div>
                             <div className={"w-full md:h-1/4 flex flex-col md:flex-row items-center justify-between text-sm md:text-lg text-center gap-5"}>
@@ -139,7 +139,7 @@ const CompetitionCard = ({openCard, setOpenCard , eventData}) => {
 
                         </div>)}
                     {selected === 1 && (
-                        <div className={"w-full md:w-4/5 h-full bg-transparent flex flex-col items-center justify-start overflow-scroll text-lg"}>
+                        <div className={"w-full md:w-4/5 h-full bg-transparent flex flex-col items-center justify-start overflow-scroll text-base"}>
                             {eventData.format.map((format) => (
                                 <div className={"w-full flex flex-col items-start justify-start my-5 text-wrap"}>
                                     <h1 className={"bg-gray-100 clipped p-2 bg-opacity-20"}>{format.name}</h1>
@@ -155,7 +155,7 @@ const CompetitionCard = ({openCard, setOpenCard , eventData}) => {
                     )}
                     {selected === 2 && (
                         <div
-                            className={"w-full md:w-4/5 h-full bg-transparent flex flex-col items-start justify-start overflow-scroll text-lg"}>
+                            className={"w-full md:w-4/5 h-full bg-transparent flex flex-col items-start justify-start overflow-scroll text-base"}>
                             {eventData.rules.map((rule) => (
                                 <div className={"justify-start items-start flex flex-row gap-3 m-1 w-[80%]"}>
                                     <p className={"text-red-500"}>{"- "}</p>
@@ -175,8 +175,8 @@ const CompetitionCard = ({openCard, setOpenCard , eventData}) => {
                             <div className={"w-full h-fit flex flex-col gap-1 items-center justify-around"}>
                                 {eventData.contact.map((contact) => (
                                     <div className={"w-full h-1/4 flex flex-row items-center justify-center gap-5 clipped py-10 bg-gray-100 bg-opacity-20"}>
-                                    <a href={"tel:" + contact.phone}><Phone className={"h-7 w-7 text-pink-500"}/></a>
-                                        <a href={"mailto:" + contact.email}><Mail className={"h-7 w-7 text-pink-500"}/></a>
+                                        <a href={"tel:" + contact.phone}><Phone className={"h-7 w-7 text-pink-500"}/></a>
+                                        {/*<a href={"mailto:" + contact.email}><Mail className={"h-7 w-7 text-pink-500"}/></a>*/}
                                         <div className={"flex flex-col items-start justify-start"}>
                                             <h2>{contact.name}</h2>
                                             <p className={"text-lg text-pink-500"}>{contact.role}</p>
