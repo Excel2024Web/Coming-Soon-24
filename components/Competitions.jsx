@@ -75,16 +75,63 @@ const Competitions = () => {
           name:"Ajmal K K",
           role:"Event Head",
           phone:"9539697456",
-          email:""
+          email:"ajmallkk.mec@gmail.com"
         },
         {
           name:"Niranjay K",
           role: "Event Head",
           phone:"9895759413",
-          email:""
+          email:"niranjayk007@gmail.com"
         }
       ],
       url:"https://bit.ly/Robosoccer2024",
+    },
+    {
+      name: "RJ Hunt",
+      prize: "Goodies",
+      date: "18,19 January",
+      time: "-",
+      venue: "Online",
+      description : "RJ Hunt is a non-technical event where participants showcase their skills as Radio Jockeys (RJs), aiming to impress the judges with their performances. The rounds will focus on key RJ abilities, such as speaking fluently, maintaining audience engagement without hesitation, and smoothly managing an entire segment or show. Experienced RJs will serve as the judges for the event",
+      image: "/bg/rjhunt.png",
+      format : [
+        {
+          name: "Situation Round",
+          description: [
+            "Test your creativity and quick thinking as you tackle unexpected scenarios. Will you impress the CEO of Facebook with your insightful questions? How would you conduct an engaging interview with a movie star?"
+          ]
+        },
+        {
+          name: "Pictorial Storytelling",
+          description: [
+            "Unleash your imagination! Interpret a rapidly changing series of images and weave them into a captivating story."
+          ]
+        },
+        {
+          name: "Live Show Hosting",
+          description: [
+            "Get behind the mic! Host a radio program on a given topic, advertise a product, and handle a live caller"
+          ]
+        }
+      ],
+      rules:[
+        "Nil"
+      ],
+      contact : [
+        {
+          name:"Ann Sara ",
+          role:"Event Head",
+          phone:"9778253358",
+          email:""
+        },
+        {
+          name:"Sreelakshmi",
+          role: "Event Head",
+          phone:"8075876512",
+          email: ""
+        }
+      ],
+      url:"https://bit.ly/RJHunt",
     }
   ];
   const [eventData , setEventData] = useState(events[0]);
@@ -139,14 +186,15 @@ const Competitions = () => {
               <button
                   className="bg-[#d9d9d925] w-[15rem] h-[15rem] md:w-[15rem] md:h-[15rem] lg:w-[20rem] lg:h-[20rem]  rounded-bl-[6rem] rounded-tr-[6rem] relative cursor-pointer flex justify-center items-center"
                   onClick={() => {
-                    setEventData(events[0]);
+                    setEventData(event);
                     setOpenCard(true);
                   }}
               >
                 <Image
                   src={event.image}
-                  width={70}
-                  height={70}
+                  width={100}
+                  height={100}
+                  quality={100}
                  alt={"robosoccer"}
                   className={"w-7/12"}
                 >
@@ -156,14 +204,6 @@ const Competitions = () => {
               <h1 className=" font-Michroma text-xl bottom-[-2rem] ">{event.name}</h1>
             </div>
           ))}
-            <div className="flex flex-col items-center justify-center gap-5">
-              <button
-                className="bg-[#d9d9d925]  w-[15rem] h-[15rem] md:w-[15rem] md:h-[15rem] lg:w-[20rem] lg:h-[20rem]  rounded-bl-[6rem] rounded-tr-[6rem] relative cursor-pointer"
-                  onClick={() => setOpenCard(true)}
-              >
-              </button>
-              <h1 className=" font-Michroma text-xl bottom-[-2rem] ">Defuse</h1>
-            </div>
             {/*<div className="flex flex-col items-center justify-center gap-5">*/}
             {/*  <button className="bg-[#d9d9d925] md:w-[15rem] md:h-[15rem] lg:w-[20rem] lg:h-[20rem]  rounded-bl-[6rem] rounded-tr-[6rem] relative cursor-pointer">*/}
             {/*  </button>*/}
